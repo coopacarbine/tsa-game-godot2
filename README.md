@@ -1,2 +1,2 @@
-# tsa game godot
+# tsa-godot game
 
