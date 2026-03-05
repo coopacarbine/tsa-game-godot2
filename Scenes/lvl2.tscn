@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dqgepau5knsvr"]
+
+[ext_resource type="PackedScene" uid="uid://xlg011qwrc3v" path="res://Scenes/player_2.tscn" id="1_vlonw"]
+[ext_resource type="Script" uid="uid://h5bx8lry3ij6" path="res://Scripts/game_manager.gd" id="2_yo6rb"]
+[ext_resource type="PackedScene" uid="uid://cy5prk0mcrj5f" path="res://Scenes/car.tscn" id="3_8hx2h"]
+
+[node name="Lvl2" type="Node2D" unique_id=472164521]
+
+[node name="gameManager" type="Node" parent="." unique_id=1584024806]
+script = ExtResource("2_yo6rb")
+
+[node name="player2" parent="." unique_id=467945452 instance=ExtResource("1_vlonw")]
+position = Vector2(-4, 1)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1408515526]
+position = Vector2(-5, -32)
+
+[node name="car" parent="." unique_id=1538372069 instance=ExtResource("3_8hx2h")]
+position = Vector2(340, -105)
