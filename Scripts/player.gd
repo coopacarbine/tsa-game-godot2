@@ -3,6 +3,8 @@ extends CharacterBody2D
 const speed = 100
 var current_dir = "none"
 
+@onready var vision_sprite: Sprite2D = %VisionSprite
+
 func _ready():
 	$AnimatedSprite2D.play("ch1_idle_down")
 
@@ -71,3 +73,5 @@ func play_anim(movement):
 			anim.play("ch1_run_down") 
 		else:
 			anim.play("ch1_idle_down")
+			
+			

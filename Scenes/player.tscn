@@ -504,6 +504,15 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="Gradient" id="Gradient_f1ek2"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_tx1dd"]
+gradient = SubResource("Gradient_f1ek2")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 0)
+
 [node name="Player" type="CharacterBody2D" unique_id=779755447]
 position = Vector2(4, 2)
 rotation = 1.0471976
@@ -514,10 +523,15 @@ position = Vector2(-3.732051, 2.4641018)
 shape = SubResource("CircleShape2D_qqcod")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2061921132]
-position = Vector2(-4.598074, 1.9641047)
+position = Vector2(-4.598076, 1.9641019)
 rotation = -1.0471976
 scale = Vector2(0.73484546, 0.73903334)
 sprite_frames = SubResource("SpriteFrames_wohnl")
 animation = &"ch1_run_up"
 frame = 1
 frame_progress = 0.10551937
+
+[node name="VisionSprite" type="Sprite2D" parent="." unique_id=1109571905]
+unique_name_in_owner = true
+position = Vector2(-3.732048, 2.4641037)
+texture = SubResource("GradientTexture2D_tx1dd")
