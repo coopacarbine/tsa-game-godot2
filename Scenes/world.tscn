@@ -2266,7 +2266,7 @@ sources/8 = SubResource("TileSetAtlasSource_c5t2i")
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_0fj1v"]
 shader = ExtResource("7_5v1tr")
 
-[node name="Node2D" type="Node2D" unique_id=440743204]
+[node name="VideoGame" type="Node2D" unique_id=440743204]
 script = ExtResource("1_k7acu")
 
 [node name="FloorbasicL" type="TileMapLayer" parent="." unique_id=1793607647]
