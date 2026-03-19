@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://bqfgnlgsh4xo2"]
+[gd_scene format=3 uid="uid://dyciwavpnvsne"]
 
 [sub_resource type="Animation" id="Animation_f0j8h"]
 length = 0.001
@@ -53,9 +53,9 @@ _data = {
 &"fade_out": SubResource("Animation_qfcdm")
 }
 
-[node name="ColorRect" type="ColorRect" unique_id=163404452]
-offset_right = 1150.0
-offset_bottom = 649.0
+[node name="Fade_transition" type="ColorRect" unique_id=163404452]
+offset_right = 1165.0
+offset_bottom = 665.0
 color = Color(0, 0, 0, 0)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=668259497]

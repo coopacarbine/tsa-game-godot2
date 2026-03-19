@@ -535,3 +535,10 @@ frame_progress = 0.10551937
 unique_name_in_owner = true
 position = Vector2(-3.732048, 2.4641037)
 texture = SubResource("GradientTexture2D_tx1dd")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=334258121]
+zoom = Vector2(2, 2)
+limit_left = 0
+limit_top = 0
+limit_right = 1165
+limit_bottom = 648
