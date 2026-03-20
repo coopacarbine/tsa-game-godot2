@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Game Coop"
-run/main_scene="uid://n1ivnvjkmf33"
+run/main_scene="uid://cdyxqybae0l4m"
 config/features=PackedStringArray("4.6", "Mobile")
 config/icon="res://Art/icon.svg"
 
