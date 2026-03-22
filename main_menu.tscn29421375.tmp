@@ -1,0 +1,142 @@
+[gd_scene format=3 uid="uid://cdyxqybae0l4m"]
+
+[ext_resource type="Script" uid="uid://bhmg0eyyjgvqk" path="res://main_menu.gd" id="1_06t4h"]
+[ext_resource type="Texture2D" uid="uid://dfr6uy2q8ufk1" path="res://Main Menu/UI_Button_Pack_Minimal_84_PNGs_By_Csmikelandre/BOTTOMS_PIXEL/PLAY_BOTTOM_PIXEL_3.png" id="2_0o4t1"]
+[ext_resource type="Texture2D" uid="uid://bp7l2vgtj75id" path="res://Main Menu/UI_Button_Pack_Minimal_84_PNGs_By_Csmikelandre/BOTTOMS_PIXEL/PLAY_BOTTOM_PIXEL_2.png" id="3_0k4wn"]
+[ext_resource type="Texture2D" uid="uid://bi2up07evmguq" path="res://Main Menu/UI_Button_Pack_Minimal_84_PNGs_By_Csmikelandre/BOTTOMS_PIXEL/PLAY_BOTTOM_PIXEL_1.png" id="4_j5v2v"]
+[ext_resource type="Texture2D" uid="uid://c047wkd12h74b" path="res://Main Menu/UI_Button_Pack_Minimal_84_PNGs_By_Csmikelandre/BOTTOMS_PIXEL/EXIT_BOTTOM_PIXEL_3.png" id="5_iotk1"]
+[ext_resource type="Texture2D" uid="uid://bgmsn2qmyddm1" path="res://Main Menu/UI_Button_Pack_Minimal_84_PNGs_By_Csmikelandre/BOTTOMS_PIXEL/EXIT_BOTTOM_PIXEL_2.png" id="6_w44g7"]
+[ext_resource type="Texture2D" uid="uid://bbj8xti55aiu3" path="res://Main Menu/UI_Button_Pack_Minimal_84_PNGs_By_Csmikelandre/BOTTOMS_PIXEL/EXIT_BOTTOM_PIXEL_1.png" id="7_cm266"]
+[ext_resource type="Texture2D" uid="uid://d1wmm7t28q5g7" path="res://Main Menu/UI_Button_Pack_Minimal_84_PNGs_By_Csmikelandre/BOTTOMS_PIXEL/OPTIONS_BOTTOM_PIXEL_3.png" id="8_g8g3n"]
+[ext_resource type="Texture2D" uid="uid://dhiw4vbe37qc" path="res://Main Menu/UI_Button_Pack_Minimal_84_PNGs_By_Csmikelandre/BOTTOMS_PIXEL/OPTIONS_BOTTOM_PIXEL_2.png" id="9_8u0te"]
+[ext_resource type="Texture2D" uid="uid://dmikijk8uf1jj" path="res://Main Menu/UI_Button_Pack_Minimal_84_PNGs_By_Csmikelandre/BOTTOMS_PIXEL/OPTIONS_BOTTOM_PIXEL_1.png" id="10_oiatc"]
+[ext_resource type="Texture2D" uid="uid://sshe264hm6cr" path="res://Main Menu/Abandoned City/1.png" id="11_cm266"]
+[ext_resource type="Texture2D" uid="uid://drpv2fr57pbim" path="res://Main Menu/Abandoned City/2.png" id="12_g8g3n"]
+[ext_resource type="Texture2D" uid="uid://f1v41gdcg3r8" path="res://Main Menu/Abandoned City/3.png" id="13_8u0te"]
+[ext_resource type="Texture2D" uid="uid://daccxa50gxofs" path="res://Main Menu/Abandoned City/4.png" id="14_oiatc"]
+[ext_resource type="Texture2D" uid="uid://ducf36b8tmyqc" path="res://Main Menu/Abandoned City/5.png" id="15_mg3m2"]
+[ext_resource type="Texture2D" uid="uid://h4l0njt7aa3v" path="res://Main Menu/UI_Button_Pack_Minimal_84_PNGs_By_Csmikelandre/BOTTOMS_PIXEL/BLANK_BOTTOM_3.png" id="16_8u0te"]
+[ext_resource type="FontFile" uid="uid://dyda7tysoach2" path="res://Main Menu/Early GameBoy.ttf" id="17_oiatc"]
+[ext_resource type="PackedScene" uid="uid://dyciwavpnvsne" path="res://fade_transition.tscn" id="18_oiatc"]
+
+[sub_resource type="FontVariation" id="FontVariation_mg3m2"]
+base_font = ExtResource("17_oiatc")
+
+[node name="Main Menu" type="Node2D" unique_id=378411713]
+script = ExtResource("1_06t4h")
+
+[node name="Button_manager" type="Control" parent="." unique_id=219292402]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Start" type="TextureButton" parent="Button_manager" unique_id=1974372372]
+layout_mode = 0
+offset_left = 82.0
+offset_top = 370.0
+offset_right = 338.0
+offset_bottom = 434.0
+texture_normal = ExtResource("2_0o4t1")
+texture_pressed = ExtResource("3_0k4wn")
+texture_hover = ExtResource("4_j5v2v")
+
+[node name="Quit" type="TextureButton" parent="Button_manager" unique_id=1696757839]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 2.032
+anchor_bottom = 1.2980001
+offset_left = 84.0
+offset_top = 457.0
+offset_right = 258.72
+offset_bottom = 469.08
+texture_normal = ExtResource("5_iotk1")
+texture_pressed = ExtResource("6_w44g7")
+texture_hover = ExtResource("7_cm266")
+
+[node name="Options" type="TextureButton" parent="Button_manager" unique_id=514329875]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 0.717
+anchor_right = 1.0
+anchor_bottom = 0.717
+offset_left = 42.0
+offset_top = 507.32
+offset_right = 298.0
+offset_bottom = 571.32
+texture_normal = ExtResource("8_g8g3n")
+texture_pressed = ExtResource("9_8u0te")
+texture_hover = ExtResource("10_oiatc")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1686905538]
+position = Vector2(628.5, 430)
+scale = Vector2(1.7480469, 3.359375)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=743124931]
+layer = -1
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=351684881]
+offset_right = 1151.0
+offset_bottom = 649.0
+texture = ExtResource("11_cm266")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer" unique_id=660706809]
+offset_left = 1.0
+offset_top = 2.0
+offset_right = 1149.0
+offset_bottom = 651.0
+texture = ExtResource("12_g8g3n")
+expand_mode = 1
+
+[node name="TextureRect3" type="TextureRect" parent="CanvasLayer" unique_id=1535049200]
+offset_left = 2.0
+offset_top = 5.0
+offset_right = 1155.0
+offset_bottom = 654.0
+texture = ExtResource("13_8u0te")
+expand_mode = 1
+
+[node name="TextureRect4" type="TextureRect" parent="CanvasLayer" unique_id=751879748]
+offset_left = -1.0
+offset_top = 2.0
+offset_right = 1154.0
+offset_bottom = 651.0
+texture = ExtResource("14_oiatc")
+expand_mode = 1
+
+[node name="TextureRect5" type="TextureRect" parent="CanvasLayer" unique_id=1750878859]
+offset_left = -495.0
+offset_top = -295.0
+offset_right = -27.0
+offset_bottom = -151.0
+texture = ExtResource("15_mg3m2")
+expand_mode = 1
+
+[node name="Logo" type="Sprite2D" parent="." unique_id=1154872347]
+position = Vector2(793, 96.00003)
+scale = Vector2(2.4570313, 2.703125)
+texture = ExtResource("16_8u0te")
+
+[node name="Button" type="Button" parent="Logo" unique_id=436561580]
+modulate = Color(0, 0.9098039, 0.36078432, 1)
+offset_left = -124.540535
+offset_top = -28.485561
+offset_right = 124.13355
+offset_bottom = 28.485538
+theme_override_fonts/font = SubResource("FontVariation_mg3m2")
+text = "Operation:
+Butterfly"
+icon_alignment = 1
+
+[node name="Fade_transition" parent="." unique_id=163404452 instance=ExtResource("18_oiatc")]
+visible = false
+
+[node name="Fade_timer" type="Timer" parent="Fade_transition" unique_id=471938099]
+
+[connection signal="pressed" from="Button_manager/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Button_manager/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Button_manager/Options" to="." method="_on_controls_pressed"]
+[connection signal="timeout" from="Fade_transition/Fade_timer" to="." method="_on_fade_timer_timeout"]

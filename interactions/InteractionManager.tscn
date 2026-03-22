@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://cyiupik1m4iuy"]
+
+[ext_resource type="Script" uid="uid://cwl0syj2vp1ua" path="res://interactions/interaction_manager.gd" id="1_kapv5"]
+[ext_resource type="FontFile" uid="uid://dyda7tysoach2" path="res://Main Menu/Early GameBoy.ttf" id="2_jgmyy"]
+
+[sub_resource type="FontVariation" id="FontVariation_sjkfe"]
+base_font = ExtResource("2_jgmyy")
+
+[node name="InteractionManager" type="Node2D" unique_id=1876195613]
+script = ExtResource("1_kapv5")
+
+[node name="Label" type="Label" parent="." unique_id=174491582]
+z_index = 20
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 78.0
+offset_top = 15.0
+offset_right = 302.0
+offset_bottom = 151.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.5176471)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_sjkfe")
+theme_override_font_sizes/font_size = 8
+text = "E to interact"
+horizontal_alignment = 1
+vertical_alignment = 1
