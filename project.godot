@@ -15,6 +15,10 @@ run/main_scene="uid://cdyxqybae0l4m"
 config/features=PackedStringArray("4.6", "Mobile")
 config/icon="res://Art/icon.svg"
 
+[autoload]
+
+InteractionManager="*uid://cyiupik1m4iuy"
+
 [display]
 
 mouse_cursor/size/viewport_height=648

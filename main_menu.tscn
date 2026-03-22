@@ -108,10 +108,10 @@ texture = ExtResource("14_oiatc")
 expand_mode = 1
 
 [node name="TextureRect5" type="TextureRect" parent="CanvasLayer" unique_id=1750878859]
-offset_left = -495.0
-offset_top = -295.0
-offset_right = -27.0
-offset_bottom = -151.0
+offset_left = -493.0
+offset_top = -297.0
+offset_right = -25.0
+offset_bottom = -153.0
 texture = ExtResource("15_mg3m2")
 expand_mode = 1
 
@@ -134,7 +134,7 @@ icon_alignment = 1
 [node name="Fade_transition" parent="." unique_id=163404452 instance=ExtResource("18_oiatc")]
 visible = false
 
-[node name="Fade_timer" type="Timer" parent="Fade_transition" unique_id=471938099]
+[node name="Fade_timer" type="Timer" parent="Fade_transition" unique_id=1803069269]
 
 [connection signal="pressed" from="Button_manager/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Button_manager/Quit" to="." method="_on_quit_pressed"]

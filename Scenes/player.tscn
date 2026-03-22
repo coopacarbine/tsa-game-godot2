@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://cl6j1adovygss" path="res://Top-Down_Retro_Interior/FREE_Adventurer 2D Pixel Art/Sprites/RUN/run_up.png" id="9_fd4e3"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qqcod"]
-radius = 5.3851643
+radius = 5.0000005
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_igrcy"]
 atlas = ExtResource("2_f1ek2")
@@ -505,25 +505,31 @@ animations = [{
 }]
 
 [sub_resource type="Gradient" id="Gradient_f1ek2"]
-colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+offsets = PackedFloat32Array(0.12048193, 0.5903614)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_tx1dd"]
 gradient = SubResource("Gradient_f1ek2")
 fill = 1
-fill_from = Vector2(0.5, 0.5)
-fill_to = Vector2(0.5, 0)
+fill_from = Vector2(0.49565217, 0.49565217)
 
-[node name="Player" type="CharacterBody2D" unique_id=779755447]
+[node name="Player" type="CharacterBody2D" unique_id=779755447 groups=["player"]]
+y_sort_enabled = true
 position = Vector2(4, 2)
 rotation = 1.0471976
+scale = Vector2(0.5, 0.5)
+collision_layer = 2
 script = ExtResource("1_6t5aa")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=654230124]
-position = Vector2(-3.732051, 2.4641018)
+y_sort_enabled = true
+position = Vector2(-1.071796, 17.856407)
+scale = Vector2(2, 2)
 shape = SubResource("CircleShape2D_qqcod")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2061921132]
-position = Vector2(-4.598076, 1.9641019)
+modulate = Color(0.46229059, 0.46229059, 0.46229059, 1)
+position = Vector2(-1.0717947, 17.856407)
 rotation = -1.0471976
 scale = Vector2(0.73484546, 0.73903334)
 sprite_frames = SubResource("SpriteFrames_wohnl")
@@ -531,14 +537,20 @@ animation = &"ch1_run_up"
 frame = 1
 frame_progress = 0.10551937
 
-[node name="VisionSprite" type="Sprite2D" parent="." unique_id=1109571905]
-unique_name_in_owner = true
-position = Vector2(-3.732048, 2.4641037)
-texture = SubResource("GradientTexture2D_tx1dd")
-
 [node name="Camera2D" type="Camera2D" parent="." unique_id=334258121]
-zoom = Vector2(2, 2)
+zoom = Vector2(3, 3)
 limit_left = 0
 limit_top = 0
-limit_right = 1165
+limit_right = 1152
 limit_bottom = 648
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=189691966]
+z_index = 2
+position = Vector2(-1.0717926, 17.856422)
+color = Color(0.5288355, 0.40450114, 2.8878452e-07, 1)
+energy = 2.95
+shadow_enabled = true
+shadow_filter = 2
+shadow_filter_smooth = 2.3
+texture = SubResource("GradientTexture2D_tx1dd")
+texture_scale = 4.0

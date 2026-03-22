@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const speed = 100
+const speed = 70
 var current_dir = "none"
 
 @onready var vision_sprite: Sprite2D = %VisionSprite

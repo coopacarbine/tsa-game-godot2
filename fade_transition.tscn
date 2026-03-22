@@ -57,5 +57,6 @@ offset_right = 1165.0
 offset_bottom = 665.0
 color = Color(0, 0, 0, 0)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=668259497]
+[node name="animation_fade" type="AnimationPlayer" parent="." unique_id=668259497]
+unique_name_in_owner = true
 libraries/ = SubResource("AnimationLibrary_i3cdi")
