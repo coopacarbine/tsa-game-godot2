@@ -1,0 +1,111 @@
+[gd_scene format=3 uid="uid://cplu8uucwief0"]
+
+[ext_resource type="Script" uid="uid://baj6jsl1hc4ej" path="res://control.gd" id="1_li03s"]
+[ext_resource type="FontFile" uid="uid://dyda7tysoach2" path="res://Main Menu/Early GameBoy.ttf" id="2_kre67"]
+[ext_resource type="PackedScene" uid="uid://dyciwavpnvsne" path="res://fade_transition.tscn" id="3_2mpeo"]
+
+[sub_resource type="FontVariation" id="FontVariation_ee4bf"]
+base_font = ExtResource("2_kre67")
+
+[sub_resource type="FontVariation" id="FontVariation_kbped"]
+base_font = ExtResource("2_kre67")
+
+[sub_resource type="FontVariation" id="FontVariation_fj5cn"]
+base_font = ExtResource("2_kre67")
+
+[sub_resource type="FontVariation" id="FontVariation_iy58a"]
+base_font = ExtResource("2_kre67")
+
+[sub_resource type="FontVariation" id="FontVariation_6a6wx"]
+base_font = ExtResource("2_kre67")
+
+[node name="OptionsMenu" type="Control" unique_id=1145376378]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1153.0
+offset_bottom = 647.0
+script = ExtResource("1_li03s")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2117428723]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -1.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.21176471, 0, 1, 0.6666667)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=2116166959]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -284.5
+offset_top = -134.5
+offset_right = 305.5
+offset_bottom = 116.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MusicBox" type="HBoxContainer" parent="VBoxContainer" unique_id=962876865]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/MusicBox" unique_id=1408090913]
+layout_mode = 2
+theme_override_fonts/font = SubResource("FontVariation_ee4bf")
+text = "Music On/Off"
+
+[node name="CheckButton" type="CheckButton" parent="VBoxContainer/MusicBox" unique_id=385965924]
+layout_mode = 2
+button_pressed = true
+
+[node name="BrightnessBox" type="HBoxContainer" parent="VBoxContainer" unique_id=1566462433]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/BrightnessBox" unique_id=10097598]
+layout_mode = 2
+theme_override_fonts/font = SubResource("FontVariation_kbped")
+text = "Brightness"
+
+[node name="HSlider" type="HSlider" parent="VBoxContainer/BrightnessBox" unique_id=653854831]
+custom_minimum_size = Vector2(400, 50)
+layout_mode = 2
+min_value = 0.5
+max_value = 1.5
+step = 0.1
+value = 1.0
+
+[node name="ControlsBox" type="VBoxContainer" parent="VBoxContainer" unique_id=421922121]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/ControlsBox" unique_id=87222404]
+layout_mode = 2
+theme_override_fonts/font = SubResource("FontVariation_fj5cn")
+text = "CONTROLS"
+
+[node name="controlslabel" type="Label" parent="VBoxContainer/ControlsBox" unique_id=874454857]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_iy58a")
+text = "W/A/S/D to Move
+E to Interact
+"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=1808473385]
+layout_mode = 2
+theme_override_fonts/font = SubResource("FontVariation_6a6wx")
+text = "Back to Menu"
+
+[node name="Fade_transition" parent="." unique_id=163404452 instance=ExtResource("3_2mpeo")]
+visible = false
+layout_mode = 0
+
+[connection signal="toggled" from="VBoxContainer/MusicBox/CheckButton" to="." method="_on_check_button_toggled"]
+[connection signal="value_changed" from="VBoxContainer/BrightnessBox/HSlider" to="." method="_on_h_slider_value_changed"]
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]

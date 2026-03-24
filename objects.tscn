@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://bvc0tphoyjon2"]
+
+[ext_resource type="Script" uid="uid://bly1w24tag8ky" path="res://testint2.gd" id="1_uq4jh"]
+[ext_resource type="Texture2D" uid="uid://ikuwpuq6u0n8" path="res://Art/Tech Dungeon Roguelite - Asset Pack (DEMO)/tiles_laboratory_LandOfPixels/16px/tilesStuff.png" id="2_uq4jh"]
+[ext_resource type="PackedScene" uid="uid://b7hmscn5acyme" path="res://interactions/interaction area/interaction_area.tscn" id="3_g7bp4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2aw66"]
+size = Vector2(18, 16)
+
+[node name="objects" type="StaticBody2D" unique_id=846827295]
+script = ExtResource("1_uq4jh")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=36550082]
+scale = Vector2(0.7166666, 0.687504)
+texture = ExtResource("2_uq4jh")
+region_enabled = true
+region_rect = Rect2(514.34283, 16.026505, 15.52887, 16.215736)
+
+[node name="InteractionArea" parent="." unique_id=765579051 instance=ExtResource("3_g7bp4")]
+action_name = "toggle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea" unique_id=512535899]
+z_index = 3
+shape = SubResource("RectangleShape2D_2aw66")
