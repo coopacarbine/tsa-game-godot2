@@ -1,24 +1,21 @@
 extends CharacterBody2D
-
+@onready var game_manager = $"../../gameManager"
 
 
 var yspeed = 200
 
 
 
-#lootbox vars
-var canSpinBox = true
-var items = ["heart", "running_shoes", "apple", "tin_can"]
 
 
 func _ready():
-	$AnimatedSprite2D.play("idle")
+	$AnimatedSprite2D.play("runner")
 
 
 
 func _physics_process(delta):
 	Player_movement(delta)
-	spinBox(delta)
+
 
 func Player_movement(delta):
 	if Input.is_action_pressed("up"):
@@ -28,11 +25,6 @@ func Player_movement(delta):
 	else:
 		velocity.y = 0
 	move_and_slide()
-	  
-func spinBox(delta):
-	if canSpinBox == true && Input.is_action_just_pressed( "space"):
-		print("Debug(spinbox): " + items.pick_random())
-		return items.pick_random()
-		
-	
+
+
 	

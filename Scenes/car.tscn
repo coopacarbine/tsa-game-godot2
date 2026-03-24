@@ -1,22 +1,63 @@
 [gd_scene format=3 uid="uid://cy5prk0mcrj5f"]
 
 [ext_resource type="Script" uid="uid://dm5x4md4qsg0i" path="res://Scripts/car.gd" id="1_1sfmx"]
-[ext_resource type="Texture2D" uid="uid://b7n7yf0hlt6uy" path="res://kenney_pico-8-city/kenney_rpg-urban-pack/Tiles/tile_0474.png" id="1_go66d"]
 [ext_resource type="PackedScene" uid="uid://blbm3e6mu7bbp" path="res://Scenes/killzone.tscn" id="2_go66d"]
+[ext_resource type="Texture2D" uid="uid://d23naeccf8heq" path="res://Art/sprites/Alex's art/carV1.png" id="3_1sfmx"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1sfmx"]
 radius = 16.03122
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_yi23e"]
+atlas = ExtResource("3_1sfmx")
+region = Rect2(0, 0, 151, 42)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u41r7"]
+atlas = ExtResource("3_1sfmx")
+region = Rect2(0, 42, 151, 42)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aky6y"]
+atlas = ExtResource("3_1sfmx")
+region = Rect2(0, 84, 151, 42)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aqss3"]
+atlas = ExtResource("3_1sfmx")
+region = Rect2(0, 126, 151, 42)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_y3wrf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yi23e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u41r7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aky6y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aqss3")
+}],
+"loop": true,
+"name": &"car",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="car" type="CharacterBody2D" unique_id=854200277]
 script = ExtResource("1_1sfmx")
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=702644709]
-position = Vector2(0, -24)
-scale = Vector2(3, 3)
-texture = ExtResource("1_go66d")
 
 [node name="killZone" parent="." unique_id=303358499 instance=ExtResource("2_go66d")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="killZone" unique_id=315383844]
 position = Vector2(7, -25)
 shape = SubResource("CircleShape2D_1sfmx")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1393153191]
+position = Vector2(36, -23)
+sprite_frames = SubResource("SpriteFrames_y3wrf")
+animation = &"car"

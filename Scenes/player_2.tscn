@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://ca7xmlmgkeapa" path="res://Scripts/Player2.gd" id="1_cgts5"]
 [ext_resource type="Texture2D" uid="uid://dw48vuqe1q510" path="res://FREE_Samurai 2D Pixel Art v1.2/FREE_Samurai 2D Pixel Art v1.2/Sprites/IDLE.png" id="1_mkara"]
+[ext_resource type="Texture2D" uid="uid://d4bk7mc0e6jqn" path="res://Art/sprites/Alex's art/characterV3.png" id="3_a3adp"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cgts5"]
 atlas = ExtResource("1_mkara")
@@ -42,6 +43,22 @@ region = Rect2(768, 0, 96, 96)
 [sub_resource type="AtlasTexture" id="AtlasTexture_os74a"]
 atlas = ExtResource("1_mkara")
 region = Rect2(864, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ggx0o"]
+atlas = ExtResource("3_a3adp")
+region = Rect2(0, 0, 100, 135)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0kjde"]
+atlas = ExtResource("3_a3adp")
+region = Rect2(100, 0, 100, 135)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ay52l"]
+atlas = ExtResource("3_a3adp")
+region = Rect2(0, 135, 100, 135)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c6poq"]
+atlas = ExtResource("3_a3adp")
+region = Rect2(100, 135, 100, 135)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ggx0o"]
 animations = [{
@@ -84,20 +101,38 @@ animations = [{
 "loop": true,
 "name": &"idle",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ggx0o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0kjde")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ay52l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c6poq")
+}],
+"loop": true,
+"name": &"runner",
+"speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_cgts5"]
-radius = 5.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a3adp"]
+size = Vector2(5, 28)
 
 [node name="player2" type="CharacterBody2D" unique_id=467945452]
 script = ExtResource("1_cgts5")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=788287116]
-position = Vector2(-1, -33)
+position = Vector2(-2, -12)
+scale = Vector2(0.26, 0.26)
 sprite_frames = SubResource("SpriteFrames_ggx0o")
-animation = &"idle"
-frame_progress = 0.8415621
+animation = &"runner"
+frame_progress = 0.09629282
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=341864887]
-position = Vector2(0, -16)
-shape = SubResource("CircleShape2D_cgts5")
+position = Vector2(1, -13)
+shape = SubResource("RectangleShape2D_a3adp")
