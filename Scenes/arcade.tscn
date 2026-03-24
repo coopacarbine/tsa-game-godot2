@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bsb1kducswvxa"]
+
+[ext_resource type="Texture2D" uid="uid://ombxijpwksqj" path="res://Modern tiles_Free/Interiors_free/32x32/Interiors_free_32x32.png" id="1_3ufcg"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3h0sf"]
+texture = ExtResource("1_3ufcg")
+
+[sub_resource type="TileSet" id="TileSet_i82s6"]
+sources/0 = SubResource("TileSetAtlasSource_3h0sf")
+
+[node name="Node2D" type="Node2D" unique_id=504701722]
+
+[node name="TileMap" type="TileMap" parent="." unique_id=1037451515]
+tile_set = SubResource("TileSet_i82s6")
+format = 2

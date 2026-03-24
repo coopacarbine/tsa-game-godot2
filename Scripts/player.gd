@@ -1,10 +1,12 @@
 extends CharacterBody2D
 
-const speed = 100
+const speed = 70
 var current_dir = "none"
 
+@onready var vision_sprite: Sprite2D = %VisionSprite
+
 func _ready():
-	$AnimatedSprite2D.play("sam_idle")
+	$AnimatedSprite2D.play("ch1_idle_down")
 
 
 func _physics_process(delta):
@@ -41,19 +43,35 @@ func player_movement(delta):
 	
 		
 func play_anim(movement):
-	var dir = current_dir
 	var anim = $AnimatedSprite2D		
 	
-	if dir == "right":
+	if current_dir == "right":
 		anim.flip_h = false
 		if movement == 1:
-			anim.play("sam_run")
-		elif movement == 0:
-			anim.play("sam_idle")
+			anim.play("ch1_run_right")
+		else:
+			anim.play("ch1_idle_right")
 			
-	if dir == "left":
-		anim.flip_h = true
-		if movement == 1:
-			anim.play("sam_run")
-		elif movement == 0:
-			anim.play("sam_idle")
+	elif current_dir == "left":
+		anim.flip_h = true 
+		if movement == 1: 
+			anim.play("ch1_run_right") 
+		else:
+			anim.play("ch1_idle_right")
+	
+			
+	elif current_dir == "up":
+		anim.flip_h = true 
+		if movement == 1: 
+			anim.play("ch1_run_up") 
+		else:
+			anim.play("ch1_idle_up")
+			
+	elif current_dir == "down":
+		anim.flip_h = false 
+		if movement == 1: 
+			anim.play("ch1_run_down") 
+		else:
+			anim.play("ch1_idle_down")
+			
+			

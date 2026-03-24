@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cpgkijuufgq2x"]
+
+[ext_resource type="Texture2D" uid="uid://cmqgf54ksbpu" path="res://Main Menu/UI_Button_Pack_Minimal_84_PNGs_By_Csmikelandre/BOTTOMS_BOLD/BLANK_BOND_1.png" id="1_h1kje"]
+[ext_resource type="Script" uid="uid://bly1w24tag8ky" path="res://testint2.gd" id="1_mm8wx"]
+[ext_resource type="PackedScene" uid="uid://b7hmscn5acyme" path="res://interactions/interaction area/interaction_area.tscn" id="2_mm8wx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2aw66"]
+size = Vector2(472, 123)
+
+[node name="objects" type="StaticBody2D" unique_id=846827295]
+script = ExtResource("1_mm8wx")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=36550082]
+texture = ExtResource("1_h1kje")
+
+[node name="InteractionArea" parent="." unique_id=765579051 instance=ExtResource("2_mm8wx")]
+action_name = "toggle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea" unique_id=512535899]
+position = Vector2(35, 5.5)
+shape = SubResource("RectangleShape2D_2aw66")
