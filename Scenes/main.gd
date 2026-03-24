@@ -8,7 +8,8 @@ extends Node2D
 var has_key: bool = false
 
 func _ready():
-
+	GameSettings.apply_brightness(self)
+	
 	if fade_anim:
 		fade_anim.play("fade_out")
 	
@@ -16,7 +17,8 @@ func _ready():
 	if door_trigger:
 		print("Main is ready. Door monitoring is: ", door_trigger.monitoring)
 		door_trigger.monitoring = false
-	
+# here is some debugging stuff because this jackass thing wasnt working
+
 func _on_objects_object_activated():
 	print("SIGNAL RECEIVED: The key was picked up!")
 	has_key = true

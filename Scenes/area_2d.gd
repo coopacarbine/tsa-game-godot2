@@ -13,6 +13,6 @@ func _on_body_entered(body):
 			print("Found yellow node! Fading now...")
 			fade_player.play("fade_in")
 			await fade_player.animation_finished
-			get_tree().change_scene_to_file("res://main_menu.tscn")
+			get_tree().change_scene_to_file("res://cutscene_2.tscn")
 		else:
 			print("Error: Still can't find 'animation_fade'. Check capitalization!")
