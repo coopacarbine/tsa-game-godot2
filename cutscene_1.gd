@@ -29,3 +29,4 @@ func _start_transition_sequence():
 
 	if event.is_action_pressed("ui_accept"):
 		get_tree().change_scene_to_file(level_path)"""
+# for when i add the skip button as well

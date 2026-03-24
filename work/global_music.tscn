@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://ceou6n5ju8vs8"]
+
+[ext_resource type="AudioStream" uid="uid://bpcyf34reid5x" path="res://work/clavier-music-lost-dreams-inspiring-cinematic-ambient-208164.mp3" id="1_rclmh"]
+
+[node name="GlobalMusic" type="AudioStreamPlayer" unique_id=678377238]
+stream = ExtResource("1_rclmh")
+volume_db = -7.911
+autoplay = true

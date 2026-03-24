@@ -1,0 +1,466 @@
+[gd_scene format=3 uid="uid://c2pwsoqv35kmj"]
+
+[ext_resource type="Texture2D" uid="uid://h4l0njt7aa3v" path="res://Main Menu/UI_Button_Pack_Minimal_84_PNGs_By_Csmikelandre/BOTTOMS_PIXEL/BLANK_BOTTOM_3.png" id="1_kq2bq"]
+[ext_resource type="FontFile" uid="uid://dyda7tysoach2" path="res://Main Menu/Early GameBoy.ttf" id="2_rhp03"]
+[ext_resource type="Texture2D" uid="uid://jmf6u5yx0c7" path="res://Screenshot 2026-03-22 192855.png" id="3_h5hlm"]
+[ext_resource type="FontFile" uid="uid://cvgausd338lt5" path="res://Arial-bold.ttf" id="4_rhp03"]
+
+[sub_resource type="FontVariation" id="FontVariation_stmvh"]
+base_font = ExtResource("2_rhp03")
+
+[sub_resource type="FontVariation" id="FontVariation_ea577"]
+base_font = ExtResource("2_rhp03")
+
+[sub_resource type="FontVariation" id="FontVariation_h5hlm"]
+base_font = ExtResource("4_rhp03")
+
+[node name="ColorRect" type="ColorRect" unique_id=890541559]
+offset_left = 5491.0
+offset_top = 1445.0
+offset_right = 8688.0
+offset_bottom = 3968.0
+
+[node name="Logo" type="Sprite2D" parent="." unique_id=1317314498]
+position = Vector2(889.125, 277.625)
+scale = Vector2(4.053711, 5.386718)
+texture = ExtResource("1_kq2bq")
+
+[node name="Button" type="Button" parent="Logo" unique_id=1149414550]
+modulate = Color(0, 0.9098039, 0.36078432, 1)
+offset_left = -124.84322
+offset_top = -30.42126
+offset_right = 126.196144
+offset_bottom = 29.328278
+theme_override_fonts/font = SubResource("FontVariation_stmvh")
+text = "Operation:
+Butterfly"
+icon_alignment = 1
+
+[node name="Label" type="Label" parent="." unique_id=829728309]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.048
+anchor_bottom = 0.024
+offset_left = 556.0
+offset_top = 481.0
+offset_right = 1148.768
+offset_bottom = 485.448
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_ea577")
+theme_override_font_sizes/font_size = 52
+text = "TSA VGDHS 2026"
+
+[node name="Label2" type="Label" parent="." unique_id=951906082]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.048
+anchor_bottom = 0.024
+offset_left = 500.0
+offset_top = 566.0
+offset_right = 1196.768
+offset_bottom = 570.448
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_ea577")
+theme_override_font_sizes/font_size = 52
+text = "Team ID: 22218-2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="." unique_id=931093197]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.048
+anchor_bottom = 0.024
+offset_left = -4.0
+offset_top = 657.0
+offset_right = 1732.768
+offset_bottom = 729.448
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_ea577")
+theme_override_font_sizes/font_size = 52
+text = "TSA State Conference
+Warrensburg, MO"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1170694473]
+position = Vector2(918, 2150)
+scale = Vector2(2.64467, 2.3818898)
+texture = ExtResource("3_h5hlm")
+
+[node name="Label4" type="Label" parent="." unique_id=517415173]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.048
+anchor_bottom = 0.024
+offset_left = 522.0
+offset_top = 1743.0
+offset_right = 1244.768
+offset_bottom = 1815.448
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_ea577")
+theme_override_font_sizes/font_size = 52
+text = "Cooper s. Alex R.
+Jon L. Landon B."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label5" type="Label" parent="." unique_id=144251184]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.048
+anchor_bottom = 0.024
+offset_left = 1213.0
+offset_top = 2445.0
+offset_right = 1909.7678
+offset_bottom = 2449.448
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_ea577")
+theme_override_font_sizes/font_size = 52
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=898372842]
+
+[node name="Label6" type="Label" parent="CanvasLayer" unique_id=381439404]
+anchors_preset = -1
+anchor_right = 0.048
+anchor_bottom = 0.024
+offset_left = 3906.0
+offset_top = 3226.0
+offset_right = 4602.7676
+offset_bottom = 3275.448
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_ea577")
+theme_override_font_sizes/font_size = 52
+text = "2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label7" type="Label" parent="CanvasLayer" unique_id=695031709]
+anchors_preset = -1
+anchor_right = 0.048
+anchor_bottom = 0.024
+offset_left = 2683.0
+offset_top = 873.0
+offset_right = 4419.768
+offset_bottom = 945.448
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_ea577")
+theme_override_font_sizes/font_size = 52
+text = "Table of Contents:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label8" type="Label" parent="CanvasLayer" unique_id=2085693604]
+anchors_preset = -1
+anchor_right = 0.048
+anchor_bottom = 0.024
+offset_left = 2623.0
+offset_top = 992.0
+offset_right = 4359.768
+offset_bottom = 1064.448
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_ea577")
+theme_override_font_sizes/font_size = 52
+text = "i. The Game      3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label9" type="Label" parent="CanvasLayer" unique_id=1414354093]
+anchors_preset = -1
+anchor_right = 0.048
+anchor_bottom = 0.024
+offset_left = 2639.0
+offset_top = 1127.0
+offset_right = 4328.544
+offset_bottom = 1312.448
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_ea577")
+theme_override_font_sizes/font_size = 52
+text = "a. Purpose
+B. Description
+C. Target Audience"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label10" type="Label" parent="CanvasLayer" unique_id=497798421]
+anchors_preset = -1
+anchor_right = 0.048
+anchor_bottom = 0.024
+offset_left = 2677.0
+offset_top = 1369.0
+offset_right = 4413.768
+offset_bottom = 1554.448
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_ea577")
+theme_override_font_sizes/font_size = 52
+text = "ii.  How to play    4     
+
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label11" type="Label" parent="CanvasLayer" unique_id=910083132]
+anchors_preset = -1
+anchor_right = 0.048
+anchor_bottom = 0.024
+offset_left = 2620.0
+offset_top = 1444.0
+offset_right = 4309.544
+offset_bottom = 1584.448
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_ea577")
+theme_override_font_sizes/font_size = 52
+text = "a. Controls
+b. vivid How-to-tutorial"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label12" type="Label" parent="CanvasLayer" unique_id=1114057477]
+anchors_preset = -1
+anchor_right = 0.048
+anchor_bottom = 0.024
+offset_left = 2655.0
+offset_top = 1661.0
+offset_right = 4391.768
+offset_bottom = 1846.448
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_ea577")
+theme_override_font_sizes/font_size = 52
+text = "iii.  StoryBoard    5     
+
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label13" type="Label" parent="CanvasLayer" unique_id=247549567]
+anchors_preset = -1
+anchor_right = 0.048
+anchor_bottom = 0.024
+offset_left = 2620.0
+offset_top = 1695.0
+offset_right = 4309.544
+offset_bottom = 1835.448
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_ea577")
+theme_override_font_sizes/font_size = 52
+text = "a. Hand-drawn Storyboard"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label14" type="Label" parent="CanvasLayer" unique_id=1280913536]
+anchors_preset = -1
+anchor_right = 0.048
+anchor_bottom = 0.024
+offset_left = 2674.0
+offset_top = 1861.0
+offset_right = 4410.768
+offset_bottom = 2046.448
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_ea577")
+theme_override_font_sizes/font_size = 52
+text = "iv.  CopyRight Checklist   6     
+
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label15" type="Label" parent="CanvasLayer" unique_id=1098343389]
+anchors_preset = -1
+anchor_right = 0.048
+anchor_bottom = 0.024
+offset_left = 2629.0
+offset_top = 1886.0
+offset_right = 4318.544
+offset_bottom = 2026.448
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_ea577")
+theme_override_font_sizes/font_size = 52
+text = "a. Royalty-free permissions"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label16" type="Label" parent="CanvasLayer" unique_id=980100205]
+anchors_preset = -1
+anchor_right = 0.048
+anchor_bottom = 0.024
+offset_left = 2677.0
+offset_top = 2059.0
+offset_right = 4413.768
+offset_bottom = 2244.448
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_ea577")
+theme_override_font_sizes/font_size = 52
+text = "v.  Work Log   7-15     
+
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label17" type="Label" parent="CanvasLayer" unique_id=1470117380]
+anchors_preset = -1
+anchor_right = 0.048
+anchor_bottom = 0.024
+offset_left = 2623.0
+offset_top = 2105.0
+offset_right = 4312.544
+offset_bottom = 2245.448
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_ea577")
+theme_override_font_sizes/font_size = 52
+text = "a. Planned-out work log pages"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=47917543]
+layout_mode = 0
+offset_left = -3112.0
+offset_top = -946.0
+offset_right = -826.0
+offset_bottom = 2177.0
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=1512403496]
+layout_mode = 0
+offset_left = -4755.0
+offset_top = 4104.0
+offset_right = -2469.0
+offset_bottom = 7227.0
+
+[node name="ColorRect3" type="ColorRect" parent="." unique_id=1956182850]
+layout_mode = 0
+offset_left = 931.0
+offset_top = 4158.0
+offset_right = 3217.0
+offset_bottom = 7281.0
+
+[node name="ColorRect4" type="ColorRect" parent="." unique_id=1516595559]
+layout_mode = 0
+offset_left = -8990.0
+offset_top = 8226.0
+offset_right = -6704.0
+offset_bottom = 11349.0
+
+[node name="ColorRect5" type="ColorRect" parent="." unique_id=1247572100]
+layout_mode = 0
+offset_left = -1764.0
+offset_top = 4104.0
+offset_right = 522.0
+offset_bottom = 7227.0
+
+[node name="Label6" type="Label" parent="." unique_id=83417344]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.048
+anchor_bottom = 0.024
+offset_left = -4587.0
+offset_top = 4220.0
+offset_right = -2850.232
+offset_bottom = 4292.448
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_ea577")
+theme_override_font_sizes/font_size = 52
+text = "How-To-Play:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label7" type="Label" parent="." unique_id=435279336]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.048
+anchor_bottom = 0.024
+offset_left = -4997.0
+offset_top = 4362.0
+offset_right = -2376.456
+offset_bottom = 4436.448
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_h5hlm")
+theme_override_font_sizes/font_size = 70
+text = "Operation: Butterfly is completely playable using a keyboard and
+ mouse. Although there are three different playable characters
+throughout levels, the keybinds are very similar throughout.
+To start, you are given three options in the menu: START (start the 
+game and cue the first sequence cutscene), OPTIONS (to either
+mute the game's sound or lower/raise the brightness), and the QUIT
+button (close out of the game entirely.) Pressing START will lead
+the player into a cutscene that was designed to introduce the gamer
+to our story and give them a full grasp on the task at hand. 
+Getting into the first level, the player is prompted to find a vile and
+escape the laboratory. Doing so successfully will lead you right
+into our epic chase sequence in level two. You, as the player, will 
+evade cars and will be granted powerups to assist you along the
+way. Completing that level efficiently will bring you right into level
+three, level three throws it back with a classic platformer game in 
+which you have to reach the teleporter before it is too late. 
+Completing all levels seamlessly will ensure success and 
+permission to view the ending. As the credits and ending play, you
+will be caught up with the future that the player will have officially
+changed. (Important tip: this game was designed for success, if
+something seems like it is there for a reason... it probably is!)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label8" type="Label" parent="." unique_id=980587024]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.048
+anchor_bottom = 0.024
+offset_left = -4577.0
+offset_top = 5836.0
+offset_right = -2840.232
+offset_bottom = 5908.448
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_ea577")
+theme_override_font_sizes/font_size = 52
+text = "Controls"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label9" type="Label" parent="." unique_id=404575975]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.048
+anchor_bottom = 0.024
+offset_left = -5011.0
+offset_top = 5862.0
+offset_right = -2390.456
+offset_bottom = 7247.448
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_h5hlm")
+theme_override_font_sizes/font_size = 70
+text = "As there are different features and gameplay styles for each level,
+each of the controls will be seperated pending the level:
+
+Level One:
+W - Holding W allows the player to walk up 
+A - Holding  A allows the player to walk left 
+S - Holding S allows the player to walk down 
+D -  Holding D allows the player to walk right 
+E - Pressing E allows the player to pick up item(s)
+Level Two:
+W - Holding W allows the player to walk up 
+S - Holding S allows the player to walk down 
+Space - Pressing Space will allow the player to \"roll\" the lootbox
+Level Three:
+A - Holding A allows the player to walk left
+D - Holding D allows the player to walk right
+E - Pressing E allows the player to interact with item(s)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label10" type="Label" parent="." unique_id=108863070]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.048
+anchor_bottom = 0.024
+offset_left = -3480.0
+offset_top = 7095.0
+offset_right = -1743.2319
+offset_bottom = 7167.448
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_ea577")
+theme_override_font_sizes/font_size = 52
+text = "4"
+horizontal_alignment = 1
+vertical_alignment = 1
