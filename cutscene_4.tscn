@@ -1,0 +1,97 @@
+[gd_scene format=3 uid="uid://1kj4sjcit25w"]
+
+[ext_resource type="Script" uid="uid://dbyjh7idit500" path="res://cutscene_4.gd" id="1_x72wy"]
+[ext_resource type="FontFile" uid="uid://dyda7tysoach2" path="res://Main Menu/Early GameBoy.ttf" id="2_dgac3"]
+[ext_resource type="PackedScene" uid="uid://dyciwavpnvsne" path="res://fade_transition.tscn" id="3_pu6qn"]
+
+[sub_resource type="Animation" id="Animation_dgac3"]
+resource_name = "AnimationWords4"
+length = 20.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:visible_characters")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 20),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0, 400]
+}
+
+[sub_resource type="Animation" id="Animation_pu6qn"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:visible_characters")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8cbpy"]
+_data = {
+&"AnimationWords4": SubResource("Animation_dgac3"),
+&"RESET": SubResource("Animation_pu6qn")
+}
+
+[sub_resource type="FontVariation" id="FontVariation_fuoiu"]
+base_font = ExtResource("2_dgac3")
+variation_embolden = -0.85
+
+[node name="Cutscene_4" type="Control" unique_id=938807050]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_x72wy")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1061219270]
+libraries/ = SubResource("AnimationLibrary_8cbpy")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1453819803]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="." unique_id=406953949]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.17254902, 0.6156863, 0.1254902, 1)
+theme_override_fonts/font = SubResource("FontVariation_fuoiu")
+text = "I am becoming quite proud of you. 
+Your fear level is unmatched and you have, well, maybe at least,
+ successfully changed the future for the better. Regardless, 
+if your talented effforts be futile, I find great admiration 
+in a player like you. I suppose all we can do now is wait and 
+see if the universe will ever be the same... "
+horizontal_alignment = 1
+vertical_alignment = 1
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Fade_transition" parent="." unique_id=163404452 instance=ExtResource("3_pu6qn")]
+z_index = 10
+layout_mode = 0
+offset_left = -4.0
+offset_top = -7.0
+offset_right = 1161.0
+offset_bottom = 658.0
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

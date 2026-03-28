@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://dbl12l81ltxbr" path="res://Art/sprites/Alex's art/Health.png" id="6_286jt"]
 [ext_resource type="Texture2D" uid="uid://06hp4ql5a0h1" path="res://Art/sprites/Alex's art/counterV2.png" id="7_0s2g3"]
 [ext_resource type="FontFile" uid="uid://cd71w7o40sq5g" path="res://Scenes/Early GameBoy.ttf" id="8_jil5g"]
+[ext_resource type="PackedScene" uid="uid://dyciwavpnvsne" path="res://fade_transition.tscn" id="9_vplc7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kt7k4"]
 atlas = ExtResource("2_yue0m")
@@ -881,14 +882,18 @@ animations = [{
 [sub_resource type="FontVariation" id="FontVariation_vplc7"]
 base_font = ExtResource("8_jil5g")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vplc7"]
+size = Vector2(2539, 409)
+
 [node name="Lvl2" type="Node2D" unique_id=472164521]
 
 [node name="gameManager" type="Node" parent="." unique_id=1584024806]
+unique_name_in_owner = true
 script = ExtResource("2_yo6rb")
 
 [node name="road" type="AnimatedSprite2D" parent="." unique_id=1924740839]
-position = Vector2(-6, -32)
-scale = Vector2(9, 5)
+position = Vector2(-86, -55)
+scale = Vector2(10.3203125, 5.84375)
 sprite_frames = SubResource("SpriteFrames_8hx2h")
 animation = &"road"
 
@@ -933,3 +938,19 @@ offset_bottom = 250.0
 theme_override_fonts/font = SubResource("FontVariation_vplc7")
 text = "Your current powerup:
 Nothing"
+
+[node name="Fade_transition2" type="CanvasLayer" parent="." unique_id=1091396371]
+
+[node name="Fade_transition" parent="Fade_transition2" unique_id=163404452 instance=ExtResource("9_vplc7")]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1552788648]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=327105196]
+position = Vector2(-89, -561)
+shape = SubResource("RectangleShape2D_vplc7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=466849307]
+position = Vector2(-74, 490)
+shape = SubResource("RectangleShape2D_vplc7")
+
+[editable path="Fade_transition2/Fade_transition"]

@@ -1,0 +1,211 @@
+[gd_scene format=3 uid="uid://fl6p7mf70lhi"]
+
+[ext_resource type="FontFile" uid="uid://dyda7tysoach2" path="res://Main Menu/Early GameBoy.ttf" id="1_ayyxh"]
+[ext_resource type="Script" uid="uid://cow1cm6sdclxb" path="res://ending_scene.gd" id="1_rfeu3"]
+[ext_resource type="Texture2D" uid="uid://drqeqpkuqokfi" path="res://level3/Space.png" id="1_wo5jl"]
+[ext_resource type="Shader" uid="uid://d3l4io1njlg0h" path="res://ending_scene.gdshader" id="3_1jnvm"]
+[ext_resource type="PackedScene" uid="uid://dyciwavpnvsne" path="res://fade_transition.tscn" id="5_1oa7e"]
+[ext_resource type="Texture2D" uid="uid://h4l0njt7aa3v" path="res://Main Menu/UI_Button_Pack_Minimal_84_PNGs_By_Csmikelandre/BOTTOMS_PIXEL/BLANK_BOTTOM_3.png" id="6_m2j4p"]
+[ext_resource type="Texture2D" uid="uid://l1skeuhjxmkw" path="res://Main Menu/UI_Button_Pack_Minimal_84_PNGs_By_Csmikelandre/BOTTOMS_PIXEL/BLANK_BOTTOM_2.png" id="7_66qyu"]
+[ext_resource type="Texture2D" uid="uid://c1rgm8mt2yft" path="res://Main Menu/UI_Button_Pack_Minimal_84_PNGs_By_Csmikelandre/BOTTOMS_PIXEL/BLANK_BOTTOM_1.png" id="8_8b0qh"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_uwk52"]
+shader = ExtResource("3_1jnvm")
+shader_parameter/scroll_speed = Vector2(0.05, 0)
+
+[sub_resource type="FontVariation" id="FontVariation_rfeu3"]
+base_font = ExtResource("1_ayyxh")
+
+[sub_resource type="Animation" id="Animation_4l4mv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SpaceBackground:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_wo5jl")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TextContainer/CreditsText:visible_characters")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_ayyxh"]
+resource_name = "pan_space"
+length = 30.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SpaceBackground:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 30),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("1_wo5jl"), ExtResource("1_wo5jl")]
+}
+
+[sub_resource type="Animation" id="Animation_1oa7e"]
+resource_name = "scroll_text"
+length = 45.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextContainer/CreditsText:visible_characters")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 45),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0, 780]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1jnvm"]
+_data = {
+&"RESET": SubResource("Animation_4l4mv"),
+&"pan_space": SubResource("Animation_ayyxh"),
+&"scroll_text": SubResource("Animation_1oa7e")
+}
+
+[sub_resource type="FontVariation" id="FontVariation_tg45c"]
+base_font = ExtResource("1_ayyxh")
+
+[sub_resource type="FontVariation" id="FontVariation_hv5vf"]
+base_font = ExtResource("1_ayyxh")
+
+[node name="EndingScene" type="Control" unique_id=791658371]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rfeu3")
+
+[node name="SpaceBackground" type="TextureRect" parent="." unique_id=1780856868]
+z_index = -1
+texture_repeat = 2
+material = SubResource("ShaderMaterial_uwk52")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_wo5jl")
+
+[node name="TextContainer" type="Control" parent="." unique_id=1104494686]
+anchors_preset = 0
+offset_left = 5.0
+offset_top = 28.0
+offset_right = 1154.0
+offset_bottom = 68.0
+mouse_filter = 2
+
+[node name="CreditsText" type="Label" parent="TextContainer" unique_id=1428820296]
+z_index = 5
+layout_mode = 0
+offset_left = 6.0
+offset_top = 156.0
+offset_right = 1142.0
+offset_bottom = 452.0
+theme_override_fonts/font = SubResource("FontVariation_rfeu3")
+text = "Well, as you can see, we are drifting in the middle of space. 
+I suppose we must have left something behind because, for obvious reasons, 
+it appears as if our universe has disappeared. I wish it could've ended
+differently, my favorite companion. At least we can look on the bright side, 
+there are millions of opportunities for you and I in this vast emptiness we
+call space. Finally, I would like to thank you, 
+thank you for being a part of this awesome journey, and, although the mission 
+failed, you tried your best and did all you could. Thank you again, 
+and a special good luck on your future endeavors...
+
+Credits:
+Thank you to the entire team for believing in each other 
+and a warm thank you to the creators that helped us fuel our game!"
+horizontal_alignment = 1
+vertical_alignment = 1
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="TextPlayer" type="AnimationPlayer" parent="." unique_id=1057375136]
+libraries/ = SubResource("AnimationLibrary_1jnvm")
+autoplay = &"pan_space"
+
+[node name="ButtonContainer" type="HBoxContainer" parent="." unique_id=1131004240]
+z_index = 1000
+layout_mode = 0
+offset_left = 334.0
+offset_top = 552.0
+offset_right = 850.0
+offset_bottom = 616.0
+
+[node name="QuitButton" type="TextureButton" parent="ButtonContainer" unique_id=640338261]
+layout_mode = 2
+texture_normal = ExtResource("6_m2j4p")
+texture_pressed = ExtResource("7_66qyu")
+texture_hover = ExtResource("8_8b0qh")
+
+[node name="MenuButton" type="TextureButton" parent="ButtonContainer" unique_id=848773469]
+layout_mode = 2
+texture_normal = ExtResource("6_m2j4p")
+texture_pressed = ExtResource("7_66qyu")
+texture_hover = ExtResource("8_8b0qh")
+
+[node name="Label2" type="Label" parent="." unique_id=2003160758]
+z_index = 2000
+layout_mode = 0
+offset_left = 377.0
+offset_top = 572.0
+offset_right = 553.0
+offset_bottom = 595.0
+theme_override_fonts/font = SubResource("FontVariation_tg45c")
+text = "Back to Menu"
+
+[node name="Label" type="Label" parent="." unique_id=1715272998]
+z_index = 1900
+layout_mode = 0
+offset_left = 691.0
+offset_top = 573.0
+offset_right = 755.0
+offset_bottom = 596.0
+theme_override_fonts/font = SubResource("FontVariation_hv5vf")
+text = "Quit"
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1263581117]
+z_index = 4096
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.09803922, 0, 0.23137255, 0.4)
+
+[node name="Fade_transition" parent="." unique_id=163404452 instance=ExtResource("5_1oa7e")]
+visible = false
+z_index = 4096
+layout_mode = 0
+
+[connection signal="pressed" from="ButtonContainer/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="ButtonContainer/MenuButton" to="." method="_on_menu_button_pressed"]
+
+[editable path="Fade_transition"]

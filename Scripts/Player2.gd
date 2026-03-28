@@ -1,5 +1,5 @@
 extends CharacterBody2D
-@onready var game_manager = $"../../gameManager"
+@onready var game_manager = %gameManager
 
 
 var yspeed = 200

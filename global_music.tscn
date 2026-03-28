@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c43jkbx5lrv2y"]
 
-[ext_resource type="AudioStream" uid="uid://bpcyf34reid5x" path="res://work/clavier-music-lost-dreams-inspiring-cinematic-ambient-208164.mp3" id="1_j0w4y"]
+[ext_resource type="AudioStream" uid="uid://ckmkq565vaixa" path="res://level3/soundreality-rotating-galaxy-136691.mp3" id="1_102ks"]
 [ext_resource type="Script" uid="uid://dt6vp4ap8y37x" path="res://global_music.gd" id="2_102ks"]
 
 [sub_resource type="Animation" id="Animation_j0w4y"]
@@ -51,7 +51,7 @@ _data = {
 }
 
 [node name="GlobalMusic" type="AudioStreamPlayer" unique_id=678377238]
-stream = ExtResource("1_j0w4y")
+stream = ExtResource("1_102ks")
 volume_db = -80.0
 autoplay = true
 script = ExtResource("2_102ks")

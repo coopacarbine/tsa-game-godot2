@@ -1,8 +1,8 @@
 [gd_scene format=4 uid="uid://n1ivnvjkmf33"]
 
 [ext_resource type="Script" uid="uid://c7bh2scghs6q6" path="res://Scenes/main.gd" id="1_bs12r"]
-[ext_resource type="Texture2D" uid="uid://by608otgdf8qo" path="res://kenney_pico-8-city/Sample.png" id="2_rqhku"]
-[ext_resource type="Texture2D" uid="uid://bttppmrg1dggn" path="res://kenney_pico-8-city/Tilemap/tilemap.png" id="3_cpkqv"]
+[ext_resource type="Texture2D" uid="uid://by608otgdf8qo" path="res://galletcity/kenney_pico-8-city/Sample.png" id="2_rqhku"]
+[ext_resource type="Texture2D" uid="uid://bttppmrg1dggn" path="res://galletcity/kenney_pico-8-city/Tilemap/tilemap.png" id="3_cpkqv"]
 [ext_resource type="Texture2D" uid="uid://2h7aaa2jcmju" path="res://Art/Tech Dungeon Roguelite - Asset Pack (DEMO)/tiles_laboratory_LandOfPixels/16px/tilesFloor.png" id="4_d1mwp"]
 [ext_resource type="Texture2D" uid="uid://ikuwpuq6u0n8" path="res://Art/Tech Dungeon Roguelite - Asset Pack (DEMO)/tiles_laboratory_LandOfPixels/16px/tilesStuff.png" id="5_u1b78"]
 [ext_resource type="Texture2D" uid="uid://dmwv4sgc2i5m2" path="res://Art/Tech Dungeon Roguelite - Asset Pack (DEMO)/tiles_laboratory_LandOfPixels/16px/tilesWalls.png" id="6_bdr3p"]
@@ -21,8 +21,8 @@
 [ext_resource type="Texture2D" uid="uid://cstgnpbgefxxn" path="res://Art/Tech Dungeon Roguelite - Asset Pack (DEMO)/tiles_laboratory_LandOfPixels/16px/spriteSheet_fireEffect03_21x26.png" id="9_x7ktg"]
 [ext_resource type="Texture2D" uid="uid://vedlwsy1gqyu" path="res://Art/Tech Dungeon Roguelite - Asset Pack (DEMO)/tiles_laboratory_LandOfPixels/16px/spriteSheet_tiledLiquids_16x16.png" id="10_164vy"]
 [ext_resource type="PackedScene" uid="uid://dyciwavpnvsne" path="res://fade_transition.tscn" id="10_nolpu"]
-[ext_resource type="Texture2D" uid="uid://btmhakwq4u8m" path="res://Modern tiles_Free/Interiors_free/16x16/Interiors_free_16x16.png" id="12_nolpu"]
-[ext_resource type="Texture2D" uid="uid://byggydbu4q1or" path="res://Modern tiles_Free/Interiors_free/16x16/Room_Builder_free_16x16.png" id="16_mcj63"]
+[ext_resource type="Texture2D" uid="uid://btmhakwq4u8m" path="res://galletcity/kenney_pico-8-city/Modern tiles_Free/Interiors_free/16x16/Interiors_free_16x16.png" id="12_nolpu"]
+[ext_resource type="Texture2D" uid="uid://byggydbu4q1or" path="res://galletcity/kenney_pico-8-city/Modern tiles_Free/Interiors_free/16x16/Room_Builder_free_16x16.png" id="16_mcj63"]
 [ext_resource type="PackedScene" uid="uid://bvc0tphoyjon2" path="res://objects.tscn" id="19_nolpu"]
 [ext_resource type="FontFile" uid="uid://dyda7tysoach2" path="res://Main Menu/Early GameBoy.ttf" id="20_mcj63"]
 [ext_resource type="Script" uid="uid://bwt4f6x0k6cw5" path="res://Scenes/area_2d.gd" id="21_af2a1"]
@@ -3981,8 +3981,8 @@ texture = ExtResource("5_u1b78")
 36:12/0 = 0
 27:13/size_in_atlas = Vector2i(3, 3)
 27:13/0 = 0
-27:13/0/y_sort_origin = 8
-27:13/0/physics_layer_0/polygon_0/points = PackedVector2Array(-21.666893, 13.063862, 22.941414, 13.382492, 23.260044, 14.975647, -22.941414, 15.294277)
+27:13/0/y_sort_origin = 2
+27:13/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 27:9/size_in_atlas = Vector2i(3, 2)
 27:9/0 = 0
 1:2/size_in_atlas = Vector2i(1, 4)
@@ -12123,7 +12123,7 @@ theme_override_font_sizes/font_size = 10
 text = "Task: Find the 
 hidden flask filled 
 with the vile serum...
-hint! It'll be clickable"
+hint! It'll be glowing!"
 horizontal_alignment = 1
 vertical_alignment = 1
 

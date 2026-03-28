@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bsb1kducswvxa"]
 
-[ext_resource type="Texture2D" uid="uid://ombxijpwksqj" path="res://Modern tiles_Free/Interiors_free/32x32/Interiors_free_32x32.png" id="1_3ufcg"]
+[ext_resource type="Texture2D" uid="uid://ombxijpwksqj" path="res://galletcity/kenney_pico-8-city/Modern tiles_Free/Interiors_free/32x32/Interiors_free_32x32.png" id="1_3ufcg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3h0sf"]
 texture = ExtResource("1_3ufcg")

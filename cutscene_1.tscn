@@ -71,8 +71,8 @@ offset_right = 1960.0
 offset_bottom = 753.0
 theme_override_colors/font_color = Color(0.17254902, 0.6156863, 0.1254902, 1)
 theme_override_fonts/font = SubResource("FontVariation_2v4au")
-text = "Long ago there lived a country. 
-A country so fruitful; blossoming trees, lively people, and happiness for all.
+text = "Long ago there lived a planet. 
+A planet so fruitful; blossoming trees, lively people, and happiness for all.
 
 But then, as time slowly passed, one company took over: Brain Corp.
 
@@ -82,8 +82,8 @@ Everything had now been powered by Brain Corp.
 Brain Corp was too powerful for most everyone. . . 
 that was until three lucky individuals were granted teleporters. 
 
-Each had been given the specific honor of going back in time to destroy 
-specific objects to keep Brain Corp from ever coming to power.
+Each had been given the specific honor of going back in time to alter 
+specific events to keep Brain Corp from ever coming to power.
 
 It is now your duty to facilitate them in their journey.
 

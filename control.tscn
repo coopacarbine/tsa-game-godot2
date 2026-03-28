@@ -59,7 +59,7 @@ layout_mode = 2
 [node name="Label" type="Label" parent="VBoxContainer/MusicBox" unique_id=1408090913]
 layout_mode = 2
 theme_override_fonts/font = SubResource("FontVariation_ee4bf")
-text = "Music On/Off"
+text = "Music On or Off"
 
 [node name="CheckButton" type="CheckButton" parent="VBoxContainer/MusicBox" unique_id=385965924]
 layout_mode = 2
@@ -93,9 +93,10 @@ text = "CONTROLS"
 layout_mode = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = SubResource("FontVariation_iy58a")
-text = "W/A/S/D to Move
+text = "Arrow Keys to Move
 E to Interact
-"
+Space to jump or Roll lootbox
+Enter to skip -first- cutscene"
 horizontal_alignment = 1
 
 [node name="Button" type="Button" parent="VBoxContainer" unique_id=1808473385]
@@ -108,6 +109,43 @@ layout_mode = 2
 theme_override_fonts/font = SubResource("FontVariation_qtu10")
 text = "Be warned! Once you change these settings,
 you will not be able to change them again!"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=1978913563]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="." unique_id=1299395169]
+layout_mode = 0
+offset_left = 611.0
+offset_top = 489.0
+offset_right = 1276.0
+offset_bottom = 694.0
+theme_override_font_sizes/font_size = 8
+text = "
+UIButton Megapack Csmikelandre. \"UIButton Megapack (84+ PNGs).\"
+Itch.io, 2024, https://csmikelandre.itch.io/uibutton-megapack-84pngs.  
+
+City Pack Pixel Art Nyknck. \"Citypackpixelart.\" 
+Itch.io, 2024, https://nyknck.itch.io/citypackpixelart.  
+
+Pico-8 City Kenney. \"Pico-8 City.\" Kenney.nl, 2024, https://kenney.nl/assets/pico-8-city. "
+
+[node name="Label" type="Label" parent="." unique_id=1490632155]
+layout_mode = 0
+offset_left = 255.0
+offset_top = 498.0
+offset_right = 931.0
+offset_bottom = 755.0
+theme_override_font_sizes/font_size = 8
+text = "Copyright Credits:
+Top Down Adventurer Character xzany. \"Top Down Adventurer Character.\" 
+Itch.io, 2024, https://xzany.itch.io/top-down-adventurer-character. 
+
+Abandoned City Seeone. \"Abandoned City.\" 
+Itch.io, 2024, https://seeone.itch.io/abandoned-city.  
+
+Land of Pixels Laboratory Tileset Marceles. \"Land of Pixels Laboratory Tileset Pixel Art.\" 
+Itch.io, 2024, https://marceles.itch.io/land-of-pixels-laboratory-tileset-pixel-art.  
+"
 
 [node name="Fade_transition" parent="." unique_id=163404452 instance=ExtResource("2_62e2m")]
 visible = false

@@ -4,6 +4,12 @@
 [ext_resource type="FontFile" uid="uid://dyda7tysoach2" path="res://Main Menu/Early GameBoy.ttf" id="2_rhp03"]
 [ext_resource type="Texture2D" uid="uid://jmf6u5yx0c7" path="res://Screenshot 2026-03-22 192855.png" id="3_h5hlm"]
 [ext_resource type="FontFile" uid="uid://cvgausd338lt5" path="res://Arial-bold.ttf" id="4_rhp03"]
+[ext_resource type="Texture2D" uid="uid://7wc158b0yoio" path="res://Main Menu/UI_Button_Pack_Minimal_84_PNGs_By_Csmikelandre/BOTTOMS_PIXEL/Screenshot 2026-03-27 173638.png" id="5_stmvh"]
+[ext_resource type="Texture2D" uid="uid://d4j7mm8j1ei8g" path="res://Main Menu/UI_Button_Pack_Minimal_84_PNGs_By_Csmikelandre/BOTTOMS_PIXEL/download-horizontal-black-line-png-701751694604737ovzba5b5o9.png" id="6_ea577"]
+[ext_resource type="Texture2D" uid="uid://dtc6ve3mipgoq" path="res://Main Menu/UI_Button_Pack_Minimal_84_PNGs_By_Csmikelandre/BOTTOMS_PIXEL/Screenshot 2026-03-27 175153.png" id="7_liib7"]
+[ext_resource type="Texture2D" uid="uid://c0b1vnrxdut44" path="res://Main Menu/UI_Button_Pack_Minimal_84_PNGs_By_Csmikelandre/BOTTOMS_PIXEL/Screenshot 2026-03-27 175106.png" id="8_6u4py"]
+[ext_resource type="Texture2D" uid="uid://52wf73r2t18g" path="res://Main Menu/UI_Button_Pack_Minimal_84_PNGs_By_Csmikelandre/BOTTOMS_PIXEL/Screenshot 2026-03-27 175136.png" id="9_j7pnk"]
+[ext_resource type="Texture2D" uid="uid://c4gvmvmith0e7" path="res://Main Menu/UI_Button_Pack_Minimal_84_PNGs_By_Csmikelandre/BOTTOMS_PIXEL/Screenshot 2026-03-27 175124.png" id="10_xrjny"]
 
 [sub_resource type="FontVariation" id="FontVariation_stmvh"]
 base_font = ExtResource("2_rhp03")
@@ -330,10 +336,10 @@ offset_bottom = 7227.0
 
 [node name="ColorRect3" type="ColorRect" parent="." unique_id=1956182850]
 layout_mode = 0
-offset_left = 931.0
-offset_top = 4158.0
-offset_right = 3217.0
-offset_bottom = 7281.0
+offset_left = 6854.0
+offset_top = 3892.0
+offset_right = 9140.0
+offset_bottom = 7015.0
 
 [node name="ColorRect4" type="ColorRect" parent="." unique_id=1516595559]
 layout_mode = 0
@@ -433,18 +439,19 @@ text = "As there are different features and gameplay styles for each level,
 each of the controls will be seperated pending the level:
 
 Level One:
-W - Holding W allows the player to walk up 
-A - Holding  A allows the player to walk left 
-S - Holding S allows the player to walk down 
-D -  Holding D allows the player to walk right 
+Up Key - Holding allows the player to walk up 
+Left Key - Holding  allows the player to walk left 
+Down Key - Holding allows the player to walk down 
+Right Key -  Holding allows the player to walk right 
 E - Pressing E allows the player to pick up item(s)
 Level Two:
-W - Holding W allows the player to walk up 
-S - Holding S allows the player to walk down 
+Up Key - Holding allows the player to walk up 
+Down Key - Holding allows the player to walk down 
 Space - Pressing Space will allow the player to \"roll\" the lootbox
 Level Three:
-A - Holding A allows the player to walk left
-D - Holding D allows the player to walk right
+Left Key - Holding allows the player to walk left
+Right Key - Holding allows the player to walk right
+Space - Pressing Space will allow the player to jump
 E - Pressing E allows the player to interact with item(s)"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -464,3 +471,76 @@ theme_override_font_sizes/font_size = 52
 text = "4"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1077580116]
+position = Vector2(-543.49994, 5639.9995)
+scale = Vector2(2.9950793, 2.916666)
+texture = ExtResource("5_stmvh")
+
+[node name="Label11" type="Label" parent="." unique_id=73287101]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 166.0
+offset_right = 72.0
+offset_bottom = 439.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 200
+text = "l"
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=448437258]
+position = Vector2(-6990.9995, 1171)
+scale = Vector2(2.9950793, 2.916666)
+texture = ExtResource("6_ea577")
+
+[node name="ColorRect6" type="ColorRect" parent="." unique_id=2133576609]
+layout_mode = 0
+offset_left = -519.0
+offset_top = 3945.0
+offset_right = -501.0
+offset_bottom = 7868.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect7" type="ColorRect" parent="." unique_id=51804989]
+layout_mode = 0
+offset_left = -2577.0
+offset_top = 5401.0
+offset_right = -2559.0
+offset_bottom = 9324.0
+rotation = -1.5703429
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect8" type="ColorRect" parent="." unique_id=291725922]
+layout_mode = 0
+offset_left = -2537.9998
+offset_top = 6346.0
+offset_right = -2519.9998
+offset_bottom = 10269.0
+rotation = -1.5703429
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect9" type="ColorRect" parent="." unique_id=736956782]
+layout_mode = 0
+offset_left = 3815.0
+offset_top = 4320.9995
+offset_right = 6101.0
+offset_bottom = 7443.9995
+
+[node name="Sprite2D4" type="Sprite2D" parent="." unique_id=1132638467]
+position = Vector2(4991, 6647)
+scale = Vector2(1.8, 1.753)
+texture = ExtResource("7_liib7")
+
+[node name="Sprite2D7" type="Sprite2D" parent="." unique_id=243224924]
+position = Vector2(8018, 4653.0005)
+scale = Vector2(1.8, 1.753)
+texture = ExtResource("8_6u4py")
+
+[node name="Sprite2D5" type="Sprite2D" parent="." unique_id=1583274861]
+position = Vector2(4944, 5080)
+scale = Vector2(1.8, 1.753)
+texture = ExtResource("9_j7pnk")
+
+[node name="Sprite2D6" type="Sprite2D" parent="." unique_id=1790154582]
+position = Vector2(8004, 6254.0005)
+scale = Vector2(1.8, 1.753)
+texture = ExtResource("10_xrjny")
