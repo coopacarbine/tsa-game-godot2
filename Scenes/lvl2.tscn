@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dqgepau5knsvr"]
 
-[ext_resource type="Script" uid="uid://fdhu6mpve2ew" path="res://Scripts/lvl_2.gd" id="1_vplc7"]
+[ext_resource type="PackedScene" uid="uid://xlg011qwrc3v" path="res://Scenes/player_2.tscn" id="1_vlonw"]
 [ext_resource type="Script" uid="uid://h5bx8lry3ij6" path="res://Scripts/game_manager.gd" id="2_yo6rb"]
 [ext_resource type="Texture2D" uid="uid://bl8kpaw7fc1q5" path="res://Art/sprites/Alex's art/RoadV3.png" id="2_yue0m"]
 [ext_resource type="PackedScene" uid="uid://cy5prk0mcrj5f" path="res://Scenes/car.tscn" id="3_8hx2h"]
@@ -8,69 +8,42 @@
 [ext_resource type="Texture2D" uid="uid://06hp4ql5a0h1" path="res://Art/sprites/Alex's art/counterV2.png" id="7_0s2g3"]
 [ext_resource type="PackedScene" uid="uid://dyciwavpnvsne" path="res://fade_transition.tscn" id="9_vplc7"]
 
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0s2g3"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_kt7k4"]
 atlas = ExtResource("2_yue0m")
-region = Rect2(128, 256, 128, 128)
+region = Rect2(0, 0, 128, 128)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_jil5g"]
-atlas = ExtResource("2_yue0m")
-region = Rect2(0, 256, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_vplc7"]
-atlas = ExtResource("2_yue0m")
-region = Rect2(256, 128, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_p5c1a"]
-atlas = ExtResource("2_yue0m")
-region = Rect2(128, 128, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_vruis"]
-atlas = ExtResource("2_yue0m")
-region = Rect2(0, 128, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_xrxow"]
-atlas = ExtResource("2_yue0m")
-region = Rect2(256, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_k2xpx"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_mfs8c"]
 atlas = ExtResource("2_yue0m")
 region = Rect2(128, 0, 128, 128)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_bty1o"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_uied1"]
 atlas = ExtResource("2_yue0m")
-region = Rect2(0, 0, 128, 128)
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y5iej"]
+atlas = ExtResource("2_yue0m")
+region = Rect2(0, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ycffw"]
+atlas = ExtResource("2_yue0m")
+region = Rect2(128, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wifok"]
+atlas = ExtResource("2_yue0m")
+region = Rect2(256, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vpj7l"]
+atlas = ExtResource("2_yue0m")
+region = Rect2(0, 256, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dycdb"]
+atlas = ExtResource("2_yue0m")
+region = Rect2(128, 256, 128, 128)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8hx2h"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_0s2g3")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_jil5g")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_vplc7")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_p5c1a")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_vruis")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_xrxow")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_k2xpx")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_bty1o")
-}],
-"loop": true,
-"name": &"road",
-"speed": 17.0
 "texture": SubResource("AtlasTexture_kt7k4")
 }, {
 "duration": 1.0,
@@ -811,7 +784,6 @@ animations = [{
 size = Vector2(2539, 409)
 
 [node name="Lvl2" type="Node2D" unique_id=472164521]
-script = ExtResource("1_vplc7")
 
 [node name="gameManager" type="Node" parent="." unique_id=1584024806]
 unique_name_in_owner = true
@@ -822,7 +794,6 @@ position = Vector2(-86, -55)
 scale = Vector2(10.3203125, 5.84375)
 sprite_frames = SubResource("SpriteFrames_8hx2h")
 animation = &"road"
-frame_progress = 0.34021044
 
 [node name="player2" parent="." unique_id=467945452 instance=ExtResource("1_vlonw")]
 position = Vector2(-4, 1)
@@ -831,15 +802,12 @@ position = Vector2(-4, 1)
 position = Vector2(-5, -32)
 
 [node name="car" parent="." unique_id=1538372069 instance=ExtResource("3_8hx2h")]
-visible = false
 position = Vector2(211, -135)
 
 [node name="car2" parent="." unique_id=854200277 instance=ExtResource("3_8hx2h")]
-visible = false
 position = Vector2(448, 73)
 
 [node name="car3" parent="." unique_id=1943591979 instance=ExtResource("3_8hx2h")]
-visible = false
 position = Vector2(-244, 81)
 
 [node name="Health" type="AnimatedSprite2D" parent="." unique_id=278555681]
@@ -867,8 +835,5 @@ shape = SubResource("RectangleShape2D_vplc7")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=466849307]
 position = Vector2(-74, 490)
 shape = SubResource("RectangleShape2D_vplc7")
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1408515526]
-position = Vector2(-5, -32)
 
 [editable path="Fade_transition2/Fade_transition"]
