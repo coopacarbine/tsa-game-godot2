@@ -1,27 +1,30 @@
 extends Node
 #lootbox vars
-@onready var player2 = $"../player2"
+
 var is_transitioning: bool = false
-var canSpinBox = true
-var items = ["heart", "running shoes", "apple", "tin can"]
+
+
 var text = ""
-var car = 300
+var car = 400
 var is_restarting: bool = false
 var has_ended: bool = false
 var lives = 3
+var timerIndex = 0
 
 func _ready():
 	start_level_timer()
+	$"../road".play("road")
 
 func start_level_timer():
 	$"../Timer".play("TimerBack")
-	await get_tree().create_timer(45.0).timeout
+	while timerIndex < 45:
+		await get_tree().create_timer(1.0).timeout
+		timerIndex = timerIndex + 1
+		car = (10 * timerIndex) + 400
+	
 	endGame(1)
 
-func _physics_process(delta):
-	spinBox(delta)
-	
-	
+
 	
 	
 func start_2_transition():
@@ -78,32 +81,7 @@ func endGame(ending):
 		print("Final Win Triggered!")
 		start_cut3_transition()
 
-func spinBox(delta):
-	if canSpinBox == true && Input.is_action_just_pressed( "space"):
-		
-		$"../LootBox".play("open")
-		canSpinBox = false
-		await get_tree().create_timer(2.0).timeout
-		$"../LootBox".play("idle")
-		canSpinBox = true
-		
-		
-		
-		text = items.pick_random()
-		if text == "heart":
-			$"../powerupLabel".text = "Your Powerup Is: \nA Heart! \ngives your back one heart!"
-			if lives < 3:
-				lives = lives + 1
-		if text == "running shoes":
-			
-			car = 400
-			$"../powerupLabel".text = "Your Powerup Is: \n Running Shoes! \nMakes you run faster to the cars!"
-		if text == "apple":
-			$"../powerupLabel".text = "Your Powerup Is: \nA Apple! \nmakes you slower!"
-			car = 200
-		if text == "tin can":
-			$"../powerupLabel".text = "Your Powerup Is: \nA Tin Can! \ngives you nothing!"
-			
+
 func checkSpeed():
 	return car		
 		
