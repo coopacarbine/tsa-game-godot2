@@ -1,0 +1,183 @@
+[gd_scene format=3 uid="uid://b5i4n7kq4ca6x"]
+
+[ext_resource type="Script" uid="uid://cs8frbh46jxqk" path="res://dialogue_realm.gd" id="1_782jt"]
+[ext_resource type="Texture2D" uid="uid://ct733o1rrdbdf" path="res://TSA Nationals Refine/new art/TSASquad.png" id="1_gg66f"]
+[ext_resource type="Texture2D" uid="uid://bp7m0hyxgjnaw" path="res://TSA Nationals Refine/new art/cooper.png" id="2_7fmeo"]
+[ext_resource type="FontFile" uid="uid://dyda7tysoach2" path="res://Main Menu/Early GameBoy.ttf" id="3_7fmeo"]
+[ext_resource type="AudioStream" uid="uid://cbl022mc1liaj" path="res://sound/Timeline 1.mp3" id="5_ibpse"]
+[ext_resource type="PackedScene" uid="uid://dyciwavpnvsne" path="res://Scenes/fade_transition.tscn" id="6_1h6d3"]
+[ext_resource type="Texture2D" uid="uid://biinr8pbbubgt" path="res://TSA Nationals Refine/white-stage-spotlight-png.webp" id="7_ohm64"]
+[ext_resource type="Texture2D" uid="uid://6bcgqvv4fvub" path="res://TSA Nationals Refine/595FAD8C-E33F-4E12-A974-9B2D043A2BA3.png.eac9bd8cac80378692e4115553790af8.png" id="8_sv6qy"]
+
+[sub_resource type="Gradient" id="Gradient_sv6qy"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_3e56m"]
+gradient = SubResource("Gradient_sv6qy")
+fill = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_782jt"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
+border_blend = true
+corner_detail = 1
+
+[sub_resource type="FontVariation" id="FontVariation_ibpse"]
+base_font = ExtResource("3_7fmeo")
+
+[sub_resource type="Animation" id="Animation_ibpse"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MarginContainer/Panel/DialogueLabel:visible_characters")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_1h6d3"]
+resource_name = "typewriter"
+length = 24.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MarginContainer/Panel/DialogueLabel:visible_characters")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 24),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0, 400]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ohm64"]
+_data = {
+&"RESET": SubResource("Animation_ibpse"),
+&"typewriter": SubResource("Animation_1h6d3")
+}
+
+[sub_resource type="Environment" id="Environment_g8n2y"]
+background_mode = 3
+glow_enabled = true
+glow_intensity = 0.43
+glow_bloom = 0.76
+glow_hdr_threshold = 3.0
+glow_hdr_scale = 2.72
+glow_hdr_luminance_cap = 104.3
+
+[node name="DialogueRealm" type="Control" unique_id=255247620]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_782jt")
+
+[node name="ColorRect2" type="TextureRect" parent="." unique_id=1575018424]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_3e56m")
+expand_mode = 1
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=692243088]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 1, 0.40392157)
+
+[node name="TheTeam" type="Sprite2D" parent="." unique_id=2010997314]
+position = Vector2(582.00006, 154)
+scale = Vector2(0.17550223, 0.1472803)
+texture = ExtResource("1_gg66f")
+
+[node name="CooperBox" type="Sprite2D" parent="." unique_id=2140067933]
+position = Vector2(218, 400.375)
+scale = Vector2(0.13105412, 0.13858196)
+texture = ExtResource("2_7fmeo")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=78316716]
+custom_minimum_size = Vector2(1.515, 3.875)
+layout_mode = 0
+offset_left = 301.0
+offset_top = 332.0
+offset_right = 861.22
+offset_bottom = 481.05
+
+[node name="Panel" type="Panel" parent="MarginContainer" unique_id=1604881358]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_782jt")
+
+[node name="DialogueLabel" type="Label" parent="MarginContainer/Panel" unique_id=515512521]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 15.0
+offset_right = 542.0
+offset_bottom = 145.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 1, 1)
+theme_override_fonts/font = SubResource("FontVariation_ibpse")
+theme_override_font_sizes/font_size = 10
+text = "I Am Cooper, the Almighty game developer... hey! who made
+my voice this high, curse you! . . . Anyway, It appears you 
+have found us. This is the TSA Video Game Design Team! 
+We Pride ourselves in making a fun, unique, and immersive
+game for all to enjoy!
+Anywho, I must be getting back to . . . uhhhhh . . . business
+meetings of course! Good luck the rest of your Way player!"
+max_lines_visible = 500
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=492105142]
+stream = ExtResource("5_ibpse")
+volume_db = 13.053
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1341635506]
+libraries/ = SubResource("AnimationLibrary_ohm64")
+
+[node name="Fade_transition" parent="." unique_id=163404452 instance=ExtResource("6_1h6d3")]
+process_mode = 3
+layout_mode = 0
+mouse_filter = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=1172743589]
+position = Vector2(575, 226)
+scale = Vector2(-7.9867764, 1.0768209)
+texture = ExtResource("7_ohm64")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=447128114]
+environment = SubResource("Environment_g8n2y")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=658686861]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_sv6qy")
+expand_mode = 1
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+
+[editable path="Fade_transition"]

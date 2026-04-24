@@ -1,0 +1,93 @@
+[gd_scene format=3 uid="uid://d3i2iohdwnxmp"]
+
+[ext_resource type="Texture2D" uid="uid://sshe264hm6cr" path="res://Main Menu/Abandoned City/1.png" id="1_ww5ky"]
+[ext_resource type="Texture2D" uid="uid://drpv2fr57pbim" path="res://Main Menu/Abandoned City/2.png" id="2_vnd0v"]
+[ext_resource type="Texture2D" uid="uid://f1v41gdcg3r8" path="res://Main Menu/Abandoned City/3.png" id="3_jbv0s"]
+[ext_resource type="Texture2D" uid="uid://daccxa50gxofs" path="res://Main Menu/Abandoned City/4.png" id="4_p28u8"]
+[ext_resource type="Texture2D" uid="uid://ducf36b8tmyqc" path="res://Main Menu/Abandoned City/5.png" id="5_lwa4m"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=1224264456]
+layer = -1
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1946011282]
+offset_right = 1151.0
+offset_bottom = 649.0
+texture = ExtResource("1_ww5ky")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=2076504972]
+offset_left = 1.0
+offset_top = 2.0
+offset_right = 1149.0
+offset_bottom = 651.0
+texture = ExtResource("2_vnd0v")
+expand_mode = 1
+
+[node name="TextureRect3" type="TextureRect" parent="." unique_id=2052868738]
+offset_left = 2.0
+offset_top = 5.0
+offset_right = 1147.0
+offset_bottom = 649.0
+texture = ExtResource("3_jbv0s")
+expand_mode = 1
+
+[node name="TextureRect4" type="TextureRect" parent="." unique_id=1649988398]
+offset_left = 1.0
+offset_top = 2.0
+offset_right = 1151.0
+offset_bottom = 651.0
+texture = ExtResource("4_p28u8")
+expand_mode = 1
+
+[node name="TextureRect5" type="TextureRect" parent="." unique_id=2006140239]
+offset_left = -495.0
+offset_top = -295.0
+offset_right = -27.0
+offset_bottom = -151.0
+texture = ExtResource("5_lwa4m")
+expand_mode = 1
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=233378986]
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="Camera2D" unique_id=1317015638]
+layer = -1
+
+[node name="TextureRect" type="TextureRect" parent="Camera2D/CanvasLayer2" unique_id=475290683]
+offset_right = 1151.0
+offset_bottom = 649.0
+texture = ExtResource("1_ww5ky")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="Camera2D/CanvasLayer2" unique_id=757978719]
+offset_left = 1.0
+offset_top = 2.0
+offset_right = 1149.0
+offset_bottom = 651.0
+texture = ExtResource("2_vnd0v")
+expand_mode = 1
+
+[node name="TextureRect3" type="TextureRect" parent="Camera2D/CanvasLayer2" unique_id=659758182]
+offset_left = 2.0
+offset_top = 5.0
+offset_right = 1147.0
+offset_bottom = 649.0
+texture = ExtResource("3_jbv0s")
+expand_mode = 1
+
+[node name="TextureRect4" type="TextureRect" parent="Camera2D/CanvasLayer2" unique_id=276457257]
+offset_left = 1.0
+offset_top = 2.0
+offset_right = 1151.0
+offset_bottom = 651.0
+texture = ExtResource("4_p28u8")
+expand_mode = 1
+
+[node name="TextureRect5" type="TextureRect" parent="Camera2D/CanvasLayer2" unique_id=525619243]
+offset_left = -495.0
+offset_top = -295.0
+offset_right = -27.0
+offset_bottom = -151.0
+texture = ExtResource("5_lwa4m")
+expand_mode = 1

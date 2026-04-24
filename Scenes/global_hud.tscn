@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://1f2l7u6pwvn8"]
+
+[ext_resource type="Script" uid="uid://2c6osifai6ar" path="res://Scripts/global_hud.gd" id="1_6g12g"]
+[ext_resource type="FontFile" uid="uid://dyda7tysoach2" path="res://Main Menu/Early GameBoy.ttf" id="2_tymg8"]
+
+[sub_resource type="FontVariation" id="FontVariation_w0rsf"]
+base_font = ExtResource("2_tymg8")
+
+[node name="GlobalHUD" type="CanvasLayer" unique_id=1115887086]
+script = ExtResource("1_6g12g")
+
+[node name="DeathCounter" type="Label" parent="." unique_id=226016704]
+offset_left = 16.0
+offset_top = 81.0
+offset_right = 224.0
+offset_bottom = 104.0
+theme_override_fonts/font = SubResource("FontVariation_w0rsf")
+text = "Total Deaths: "

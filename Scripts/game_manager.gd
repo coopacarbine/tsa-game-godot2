@@ -1,30 +1,40 @@
 extends Node
 #lootbox vars
+# The % symbol finds a node with a "Unique Name" anywhere in the current scene
 
 var is_transitioning: bool = false
-
-
+var canSpinBox = true
+var items = ["heart", "running shoes", "apple", "tin can"]
 var text = ""
-var car = 400
+var car = 300
 var is_restarting: bool = false
 var has_ended: bool = false
 var lives = 3
-var timerIndex = 0
+
+
+@onready var player = get_node("/root/Lvl2/THE_HERO") 
 
 func _ready():
-	start_level_timer()
-	$"../road".play("road")
+	await get_tree().process_frame 
+	if player == null:
+		print("CRITICAL ERROR")
+	else:
+		start_level_timer() # This calls the function
 
+# This MUST be all the way to the left (no tabs)
 func start_level_timer():
 	$"../Timer".play("TimerBack")
-	while timerIndex < 45:
-		await get_tree().create_timer(1.0).timeout
-		timerIndex = timerIndex + 1
-		car = (10 * timerIndex) + 400
-	
+	await get_tree().create_timer(45.0).timeout
 	endGame(1)
 
 
+func _physics_process(delta):
+	if player == null:
+		player = get_node_or_null("%THE_HERO")
+		if player != null:
+			print("FOUND HIM! He just took a second to load.")
+	spinBox(delta)
+	
 	
 	
 func start_2_transition():
@@ -81,7 +91,32 @@ func endGame(ending):
 		print("Final Win Triggered!")
 		start_cut3_transition()
 
-
+func spinBox(delta):
+	if canSpinBox == true && Input.is_action_just_pressed( "space"):
+		
+		$"../LootBox".play("open")
+		canSpinBox = false
+		await get_tree().create_timer(2.0).timeout
+		$"../LootBox".play("idle")
+		canSpinBox = true
+		
+		
+		
+		text = items.pick_random()
+		if text == "heart":
+			$"../powerupLabel".text = "Your Powerup Is: \nA Heart! \ngives your back one heart!"
+			if lives < 3:
+				lives = lives + 1
+		if text == "running shoes":
+			
+			car = 400
+			$"../powerupLabel".text = "Your Powerup Is: \n Running Shoes! \nMakes you run faster to the cars!"
+		if text == "apple":
+			$"../powerupLabel".text = "Your Powerup Is: \nA Apple! \nmakes you slower!"
+			car = 200
+		if text == "tin can":
+			$"../powerupLabel".text = "Your Powerup Is: \nA Tin Can! \ngives you nothing!"
+			
 func checkSpeed():
 	return car		
 		

@@ -21,15 +21,21 @@ buses/default_bus_layout="uid://b7vix72m12q81"
 
 [autoload]
 
-InteractionManager="*uid://cyiupik1m4iuy"
 GameSettings="*uid://bqrpk068cg5ga"
+InteractionManager="*uid://cyiupik1m4iuy"
 GlobalMusic="*uid://c43jkbx5lrv2y"
+GameManagerLvl1="*uid://co7asgmgl4p6o"
+GlobalHud="*uid://1f2l7u6pwvn8"
 
 [display]
 
 window/stretch/mode="canvas_items"
 mouse_cursor/size/viewport_height=648
 mouse_cursor/size/viewport_width=1152
+
+[gui]
+
+theme/default_font_multichannel_signed_distance_field=true
 
 [input]
 
