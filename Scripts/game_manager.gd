@@ -48,6 +48,7 @@ func _physics_process(delta):
 	
 
 	
+	
 func start_2_transition():
 	if is_restarting: return
 	is_restarting = true
