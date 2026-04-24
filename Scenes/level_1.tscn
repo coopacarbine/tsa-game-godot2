@@ -1,8 +1,8 @@
 [gd_scene format=4 uid="uid://drjmbrwl5bo0t"]
 
-[ext_resource type="Script" uid="uid://c7bh2scghs6q6" path="res://Scenes/main.gd" id="1_vr6f4"]
-[ext_resource type="Shader" uid="uid://dsr8sttxgxuov" path="res://Scenes/ok.gdshader" id="2_u5cqy"]
-[ext_resource type="Script" uid="uid://ddxywgn5w6cem" path="res://Scenes/fogsprite.gd" id="3_u0op5"]
+[ext_resource type="Script" uid="uid://c7bh2scghs6q6" path="res://Scripts/main.gd" id="1_vr6f4"]
+[ext_resource type="Shader" uid="uid://dsr8sttxgxuov" path="res://Scripts/ok.gdshader" id="2_u5cqy"]
+[ext_resource type="Script" uid="uid://ddxywgn5w6cem" path="res://Scripts/fogsprite.gd" id="3_u0op5"]
 [ext_resource type="Texture2D" uid="uid://ikuwpuq6u0n8" path="res://Art/Tech Dungeon Roguelite - Asset Pack (DEMO)/tiles_laboratory_LandOfPixels/16px/tilesStuff.png" id="4_1f27d"]
 [ext_resource type="Texture2D" uid="uid://byggydbu4q1or" path="res://galletcity/kenney_pico-8-city/Modern tiles_Free/Interiors_free/16x16/Room_Builder_free_16x16.png" id="5_pm77i"]
 [ext_resource type="Texture2D" uid="uid://dkmmhoupuhufp" path="res://galletcity/galletcity.png" id="6_xub2v"]
@@ -22,10 +22,10 @@
 [ext_resource type="Texture2D" uid="uid://btmhakwq4u8m" path="res://galletcity/kenney_pico-8-city/Modern tiles_Free/Interiors_free/16x16/Interiors_free_16x16.png" id="20_s764c"]
 [ext_resource type="Texture2D" uid="uid://2h7aaa2jcmju" path="res://Art/Tech Dungeon Roguelite - Asset Pack (DEMO)/tiles_laboratory_LandOfPixels/16px/tilesFloor.png" id="21_kpjai"]
 [ext_resource type="Texture2D" uid="uid://dmwv4sgc2i5m2" path="res://Art/Tech Dungeon Roguelite - Asset Pack (DEMO)/tiles_laboratory_LandOfPixels/16px/tilesWalls.png" id="22_yaxpm"]
-[ext_resource type="PackedScene" uid="uid://bvc0tphoyjon2" path="res://objects.tscn" id="23_8f0cu"]
+[ext_resource type="PackedScene" uid="uid://bvc0tphoyjon2" path="res://Scenes/objects.tscn" id="23_8f0cu"]
 [ext_resource type="FontFile" uid="uid://dyda7tysoach2" path="res://Main Menu/Early GameBoy.ttf" id="24_g6dp3"]
-[ext_resource type="Script" uid="uid://bwt4f6x0k6cw5" path="res://Scenes/area_2d.gd" id="25_5ceot"]
-[ext_resource type="PackedScene" uid="uid://dyciwavpnvsne" path="res://fade_transition.tscn" id="26_lcsmq"]
+[ext_resource type="Script" uid="uid://bwt4f6x0k6cw5" path="res://Scripts/area_2d.gd" id="25_5ceot"]
+[ext_resource type="PackedScene" uid="uid://dyciwavpnvsne" path="res://Scenes/fade_transition.tscn" id="26_lcsmq"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_0fj1v"]
 shader = ExtResource("2_u5cqy")
