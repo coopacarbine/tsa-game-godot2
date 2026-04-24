@@ -6,9 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://cy5prk0mcrj5f" path="res://Scenes/car.tscn" id="3_8hx2h"]
 [ext_resource type="Texture2D" uid="uid://dbl12l81ltxbr" path="res://Art/sprites/Alex's art/Health.png" id="6_286jt"]
 [ext_resource type="Texture2D" uid="uid://06hp4ql5a0h1" path="res://Art/sprites/Alex's art/counterV2.png" id="7_0s2g3"]
-
-[ext_resource type="FontFile" uid="uid://cd71w7o40sq5g" path="res://Scenes/Early GameBoy.ttf" id="8_jil5g"]
-[ext_resource type="PackedScene" uid="uid://dyciwavpnvsne" path="res://Scenes/fade_transition.tscn" id="9_vplc7"]
 [ext_resource type="PackedScene" uid="uid://dyciwavpnvsne" path="res://fade_transition.tscn" id="9_vplc7"]
 
 
@@ -827,11 +824,6 @@ sprite_frames = SubResource("SpriteFrames_8hx2h")
 animation = &"road"
 frame_progress = 0.34021044
 
-[node name="LootBox" type="AnimatedSprite2D" parent="." unique_id=698052007]
-position = Vector2(448, 135)
-scale = Vector2(4.328125, 4.3125)
-sprite_frames = SubResource("SpriteFrames_kt7k4")
-animation = &"idle"
 [node name="player2" parent="." unique_id=467945452 instance=ExtResource("1_vlonw")]
 position = Vector2(-4, 1)
 
