@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://bcq065lk5ewn6"]
+
+[ext_resource type="Script" uid="uid://272lghmxf5bg" path="res://npc_tsa.gd" id="1_58vei"]
+[ext_resource type="Texture2D" uid="uid://ct733o1rrdbdf" path="res://TSA Nationals Refine/new art/TSASquad.png" id="2_63n5w"]
+[ext_resource type="FontFile" uid="uid://cd71w7o40sq5g" path="res://Scenes/Early GameBoy.ttf" id="3_63n5w"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0mfxw"]
+radius = 89.02247
+
+[sub_resource type="FontVariation" id="FontVariation_63n5w"]
+base_font = ExtResource("3_63n5w")
+
+[node name="NPC_TSA" type="Area2D" unique_id=588050324]
+position = Vector2(96, 49)
+script = ExtResource("1_58vei")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=693362264]
+position = Vector2(19.51, 11.762499)
+scale = Vector2(0.018, 0.018)
+texture = ExtResource("2_63n5w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=513878251]
+position = Vector2(20, 12)
+shape = SubResource("CircleShape2D_0mfxw")
+
+[node name="Label" type="Label" parent="." unique_id=2066585607]
+offset_left = -32.0
+offset_top = -24.0
+offset_right = 219.05957
+offset_bottom = -1.0
+theme_override_fonts/font = SubResource("FontVariation_63n5w")
+text = "Press E to Talk"

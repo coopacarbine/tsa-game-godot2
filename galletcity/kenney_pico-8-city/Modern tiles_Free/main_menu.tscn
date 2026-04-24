@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://xllrb6eh7bof"]
 
-[ext_resource type="Script" uid="uid://bhmg0eyyjgvqk" path="res://main_menu.gd" id="1_06t4h"]
+[ext_resource type="Script" uid="uid://bhmg0eyyjgvqk" path="res://Scripts/main_menu.gd" id="1_06t4h"]
 [ext_resource type="Texture2D" uid="uid://dfr6uy2q8ufk1" path="res://Main Menu/UI_Button_Pack_Minimal_84_PNGs_By_Csmikelandre/BOTTOMS_PIXEL/PLAY_BOTTOM_PIXEL_3.png" id="2_0o4t1"]
 [ext_resource type="Texture2D" uid="uid://bp7l2vgtj75id" path="res://Main Menu/UI_Button_Pack_Minimal_84_PNGs_By_Csmikelandre/BOTTOMS_PIXEL/PLAY_BOTTOM_PIXEL_2.png" id="3_0k4wn"]
 [ext_resource type="Texture2D" uid="uid://bi2up07evmguq" path="res://Main Menu/UI_Button_Pack_Minimal_84_PNGs_By_Csmikelandre/BOTTOMS_PIXEL/PLAY_BOTTOM_PIXEL_1.png" id="4_j5v2v"]
@@ -17,7 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://ducf36b8tmyqc" path="res://Main Menu/Abandoned City/5.png" id="15_mg3m2"]
 [ext_resource type="Texture2D" uid="uid://h4l0njt7aa3v" path="res://Main Menu/UI_Button_Pack_Minimal_84_PNGs_By_Csmikelandre/BOTTOMS_PIXEL/BLANK_BOTTOM_3.png" id="16_8u0te"]
 [ext_resource type="FontFile" uid="uid://dyda7tysoach2" path="res://Main Menu/Early GameBoy.ttf" id="17_oiatc"]
-[ext_resource type="PackedScene" uid="uid://dyciwavpnvsne" path="res://fade_transition.tscn" id="18_oiatc"]
+[ext_resource type="PackedScene" uid="uid://dyciwavpnvsne" path="res://Scenes/fade_transition.tscn" id="18_oiatc"]
 
 [sub_resource type="FontVariation" id="FontVariation_mg3m2"]
 base_font = ExtResource("17_oiatc")

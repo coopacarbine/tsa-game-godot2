@@ -1,0 +1,171 @@
+[gd_scene format=3 uid="uid://bb7pv8aacamv"]
+
+[ext_resource type="Script" uid="uid://b7epvlfk71h6a" path="res://Scripts/game_over.gd" id="1_3y56u"]
+[ext_resource type="Texture2D" uid="uid://cby72go0pveg6" path="res://level3/free-city-backgrounds-pixel-art/city 4/9.png" id="2_ua7od"]
+[ext_resource type="Texture2D" uid="uid://h4l0njt7aa3v" path="res://Main Menu/UI_Button_Pack_Minimal_84_PNGs_By_Csmikelandre/BOTTOMS_PIXEL/BLANK_BOTTOM_3.png" id="3_3fonj"]
+[ext_resource type="Texture2D" uid="uid://l1skeuhjxmkw" path="res://Main Menu/UI_Button_Pack_Minimal_84_PNGs_By_Csmikelandre/BOTTOMS_PIXEL/BLANK_BOTTOM_2.png" id="4_758bs"]
+[ext_resource type="Texture2D" uid="uid://c1rgm8mt2yft" path="res://Main Menu/UI_Button_Pack_Minimal_84_PNGs_By_Csmikelandre/BOTTOMS_PIXEL/BLANK_BOTTOM_1.png" id="5_rr04i"]
+[ext_resource type="FontFile" uid="uid://dyda7tysoach2" path="res://Main Menu/Early GameBoy.ttf" id="6_067b4"]
+[ext_resource type="PackedScene" uid="uid://dyciwavpnvsne" path="res://Scenes/fade_transition.tscn" id="7_ua7od"]
+
+[sub_resource type="FontVariation" id="FontVariation_w4h2f"]
+base_font = ExtResource("6_067b4")
+
+[sub_resource type="FontVariation" id="FontVariation_f5mvm"]
+base_font = ExtResource("6_067b4")
+
+[sub_resource type="Animation" id="Animation_ua7od"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_3fonj"]
+resource_name = "fade_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_758bs"]
+resource_name = "fade_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rr04i"]
+_data = {
+&"RESET": SubResource("Animation_ua7od"),
+&"fade_in": SubResource("Animation_3fonj"),
+&"fade_out": SubResource("Animation_758bs")
+}
+
+[node name="GameOver" type="CanvasLayer" unique_id=791916118 groups=["game_over_screens"]]
+process_mode = 3
+layer = 100
+script = ExtResource("1_3y56u")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=52944073]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ua7od")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="ButtonContainer" type="HBoxContainer" parent="." unique_id=1882331412]
+z_index = 1000
+offset_left = 334.0
+offset_top = 552.0
+offset_right = 850.0
+offset_bottom = 616.0
+
+[node name="ContinueButton" type="TextureButton" parent="ButtonContainer" unique_id=1768579012]
+process_mode = 3
+layout_mode = 2
+texture_normal = ExtResource("3_3fonj")
+texture_pressed = ExtResource("4_758bs")
+texture_hover = ExtResource("5_rr04i")
+
+[node name="RestartButton" type="TextureButton" parent="ButtonContainer" unique_id=1250075987]
+process_mode = 3
+layout_mode = 2
+texture_normal = ExtResource("3_3fonj")
+texture_pressed = ExtResource("4_758bs")
+texture_hover = ExtResource("5_rr04i")
+
+[node name="Label2" type="Label" parent="." unique_id=67048963]
+z_index = 2000
+offset_left = 377.0
+offset_top = 572.0
+offset_right = 553.0
+offset_bottom = 595.0
+theme_override_fonts/font = SubResource("FontVariation_w4h2f")
+text = "Continue..."
+
+[node name="Label" type="Label" parent="." unique_id=34255563]
+z_index = 1900
+offset_left = 624.0
+offset_top = 572.0
+offset_right = 824.0
+offset_bottom = 595.0
+theme_override_fonts/font = SubResource("FontVariation_f5mvm")
+text = "Restart Level"
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=70416200]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -4.0
+offset_top = -1.0
+offset_right = 6.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0.59607846)
+
+[node name="Label3" type="Label" parent="." unique_id=1842412202]
+z_index = 1900
+offset_left = 124.0
+offset_top = 140.0
+offset_right = 1068.0
+offset_bottom = 344.0
+theme_override_fonts/font = SubResource("FontVariation_f5mvm")
+text = "As you know probablu now know, you have died.
+You either have the choice to restart the level completely,
+or continue on to the next level. continuing to the next level,
+and skipping this one, however adds 3 deaths to your total.
+
+Keep in mind, the outcome of this game is heavily decided by your
+total deaths.
+
+Choose your option wisely..."
+
+[node name="Fade_transition" parent="." unique_id=163404452 instance=ExtResource("7_ua7od")]
+visible = false
+z_index = 4096
+offset_left = -4.0
+offset_top = -8.0
+offset_right = 1161.0
+offset_bottom = 657.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="animation_fade" parent="Fade_transition" index="0" unique_id=668259497]
+process_mode = 3
+libraries/ = SubResource("AnimationLibrary_rr04i")
+autoplay = &"RESET"
+
+[connection signal="pressed" from="ButtonContainer/ContinueButton" to="." method="_on_continue_button_pressed"]
+[connection signal="pressed" from="ButtonContainer/RestartButton" to="." method="_on_restart_button_pressed"]
+
+[editable path="Fade_transition"]

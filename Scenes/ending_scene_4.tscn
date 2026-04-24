@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://f7v71acx8tc5"]
+
+[node name="ending_scene4" type="Control" unique_id=1098968425]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2

@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://n1ivnvjkmf33"]
 
-[ext_resource type="Script" uid="uid://c7bh2scghs6q6" path="res://Scenes/main.gd" id="1_bs12r"]
+[ext_resource type="Script" uid="uid://c7bh2scghs6q6" path="res://Scripts/main.gd" id="1_bs12r"]
 [ext_resource type="Texture2D" uid="uid://by608otgdf8qo" path="res://galletcity/kenney_pico-8-city/Sample.png" id="2_rqhku"]
 [ext_resource type="Texture2D" uid="uid://bttppmrg1dggn" path="res://galletcity/kenney_pico-8-city/Tilemap/tilemap.png" id="3_cpkqv"]
 [ext_resource type="Texture2D" uid="uid://2h7aaa2jcmju" path="res://Art/Tech Dungeon Roguelite - Asset Pack (DEMO)/tiles_laboratory_LandOfPixels/16px/tilesFloor.png" id="4_d1mwp"]
@@ -10,22 +10,31 @@
 [ext_resource type="Texture2D" uid="uid://dak4lfxq6gtoe" path="res://Art/Textures-16.png" id="6_rqhku"]
 [ext_resource type="Texture2D" uid="uid://b1ekrtb0ygie" path="res://Art/PixelSpaces Free Pack/PixelSpaces Free Pack.png" id="7_d1mwp"]
 [ext_resource type="Texture2D" uid="uid://dx43yjvn332of" path="res://Art/Tech Dungeon Roguelite - Asset Pack (DEMO)/tiles_laboratory_LandOfPixels/16px/spriteSheet_lightingBulb02_68x73.png" id="7_icduq"]
-[ext_resource type="Shader" uid="uid://dsr8sttxgxuov" path="res://Scenes/ok.gdshader" id="7_wwu6c"]
+[ext_resource type="Shader" uid="uid://dsr8sttxgxuov" path="res://Scripts/ok.gdshader" id="7_wwu6c"]
 [ext_resource type="Texture2D" uid="uid://cx5025q1aq1sa" path="res://Main Menu/Tech Dungeon Roguelite - Asset Pack (DEMO)/tileset x1.png" id="7_yymuf"]
 [ext_resource type="Texture2D" uid="uid://baakh7wdiaspi" path="res://Main Menu/Tech Dungeon Roguelite - Asset Pack (DEMO)/tileset x2.png" id="8_esggg"]
 [ext_resource type="Texture2D" uid="uid://cmman5t6yvs25" path="res://Art/Tech Dungeon Roguelite - Asset Pack (DEMO)/tiles_laboratory_LandOfPixels/16px/spriteSheet_lightBulbSmallAnimation_16x16.png" id="8_pmaet"]
 [ext_resource type="Texture2D" uid="uid://b8ls4uwd1da3i" path="res://Art/9i56x+.png" id="8_u1b78"]
-[ext_resource type="Script" uid="uid://ddxywgn5w6cem" path="res://Scenes/fogsprite.gd" id="8_yymuf"]
+[ext_resource type="Script" uid="uid://ddxywgn5w6cem" path="res://Scripts/fogsprite.gd" id="8_yymuf"]
 [ext_resource type="PackedScene" uid="uid://cxj2kyp0nsnua" path="res://Scenes/player.tscn" id="9_esggg"]
 [ext_resource type="Texture2D" uid="uid://bo5yuv281w725" path="res://Art/Tech Dungeon Roguelite - Asset Pack (DEMO)/tiles_laboratory_LandOfPixels/examples/LabFitting01.png" id="9_nolpu"]
 [ext_resource type="Texture2D" uid="uid://cstgnpbgefxxn" path="res://Art/Tech Dungeon Roguelite - Asset Pack (DEMO)/tiles_laboratory_LandOfPixels/16px/spriteSheet_fireEffect03_21x26.png" id="9_x7ktg"]
 [ext_resource type="Texture2D" uid="uid://vedlwsy1gqyu" path="res://Art/Tech Dungeon Roguelite - Asset Pack (DEMO)/tiles_laboratory_LandOfPixels/16px/spriteSheet_tiledLiquids_16x16.png" id="10_164vy"]
-[ext_resource type="PackedScene" uid="uid://dyciwavpnvsne" path="res://fade_transition.tscn" id="10_nolpu"]
+[ext_resource type="PackedScene" uid="uid://dyciwavpnvsne" path="res://Scenes/fade_transition.tscn" id="10_nolpu"]
 [ext_resource type="Texture2D" uid="uid://btmhakwq4u8m" path="res://galletcity/kenney_pico-8-city/Modern tiles_Free/Interiors_free/16x16/Interiors_free_16x16.png" id="12_nolpu"]
 [ext_resource type="Texture2D" uid="uid://byggydbu4q1or" path="res://galletcity/kenney_pico-8-city/Modern tiles_Free/Interiors_free/16x16/Room_Builder_free_16x16.png" id="16_mcj63"]
-[ext_resource type="PackedScene" uid="uid://bvc0tphoyjon2" path="res://objects.tscn" id="19_nolpu"]
+[ext_resource type="PackedScene" uid="uid://bvc0tphoyjon2" path="res://Scenes/objects.tscn" id="19_nolpu"]
 [ext_resource type="FontFile" uid="uid://dyda7tysoach2" path="res://Main Menu/Early GameBoy.ttf" id="20_mcj63"]
-[ext_resource type="Script" uid="uid://bwt4f6x0k6cw5" path="res://Scenes/area_2d.gd" id="21_af2a1"]
+[ext_resource type="PackedScene" uid="uid://cw8m2tu3457r4" path="res://Scenes/robot_enemy.tscn" id="27_icduq"]
+[ext_resource type="Script" uid="uid://lp26bjxqkxht" path="res://Scripts/enemy_spawners.gd" id="28_pmaet"]
+[ext_resource type="AudioStream" uid="uid://yfrjgd0b4le2" path="res://TSA Nationals Refine/jeremayjimenez-greece-eas-alarm-451404.mp3" id="29_164vy"]
+[ext_resource type="Script" uid="uid://dfare0thpxle0" path="res://Scripts/jar_spawner.gd" id="29_x7ktg"]
+[ext_resource type="Script" uid="uid://ch838mkauftkn" path="res://Scripts/h_box_container.gd" id="31_4otl7"]
+[ext_resource type="Texture2D" uid="uid://y4xq8m2ifhy7" path="res://TSA Nationals Refine/heart-sprite-full-health.png" id="31_g2s1u"]
+[ext_resource type="Script" uid="uid://ccxbvyxkovscu" path="res://Scripts/exit_door.gd" id="32_4otl7"]
+[ext_resource type="Script" uid="uid://2d3k3v2x35gm" path="res://Scripts/margin_container.gd" id="33_p68j0"]
+[ext_resource type="PackedScene" uid="uid://bb7pv8aacamv" path="res://Scenes/GameOver.tscn" id="34_c4ifa"]
+[ext_resource type="PackedScene" uid="uid://bcq065lk5ewn6" path="res://npc_tsa.tscn" id="35_daeh6"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_0fj1v"]
 shader = ExtResource("7_wwu6c")
@@ -3982,7 +3991,7 @@ texture = ExtResource("5_u1b78")
 27:13/size_in_atlas = Vector2i(3, 3)
 27:13/0 = 0
 27:13/0/y_sort_origin = 2
-27:13/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+27:13/0/physics_layer_0/polygon_0/points = PackedVector2Array(-22.302483, -2.877739, 23.578674, 1.9117851, 23.578674, 15.294277, -23.260044, 14.657017, -24.215939, 0.95589066)
 27:9/size_in_atlas = Vector2i(3, 2)
 27:9/0 = 0
 1:2/size_in_atlas = Vector2i(1, 4)
@@ -11998,8 +12007,8 @@ corner_detail = 1
 [sub_resource type="FontVariation" id="FontVariation_ocmlb"]
 base_font = ExtResource("20_mcj63")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_af2a1"]
-size = Vector2(30, 19)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p68j0"]
+size = Vector2(40, 30)
 
 [node name="level1" type="Node2D" unique_id=440743204]
 y_sort_enabled = true
@@ -12079,8 +12088,15 @@ tile_map_data = PackedByteArray("AAAIAB8AAAAbAA0AAAAIACIAAAAbAA0AAAAIACUAAAAbAA0
 tile_set = SubResource("TileSet_u1b78")
 
 [node name="Player" parent="." unique_id=779755447 instance=ExtResource("9_esggg")]
+visibility_layer = 3
 texture_filter = 2
-position = Vector2(340, 66.00001)
+position = Vector2(342.00003, 68.00001)
+scale = Vector2(0.775, 0.775)
+collision_mask = 1
+
+[node name="AnimatedSprite2D" parent="Player" index="1" unique_id=2061921132]
+frame = 0
+frame_progress = 0.0
 
 [node name="FloorbasicL" type="TileMapLayer" parent="." unique_id=1793607647]
 use_parent_material = true
@@ -12095,7 +12111,7 @@ tile_map_data = PackedByteArray("AAAVAAAACAAFAAQAAAAWAAAACAAGAAQAAAAXAAAACAAHAAQ
 tile_set = SubResource("TileSet_fo5ed")
 
 [node name="objects" parent="." unique_id=846827295 instance=ExtResource("19_nolpu")]
-position = Vector2(978, 212)
+position = Vector2(1272, 204)
 
 [node name="Dialogue" type="CanvasLayer" parent="." unique_id=1378142379]
 
@@ -12127,16 +12143,6 @@ hint! It'll be glowing!"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="DoorArea" type="Area2D" parent="." unique_id=1551133465]
-position = Vector2(815, 655)
-collision_layer = 0
-collision_mask = 2
-script = ExtResource("21_af2a1")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DoorArea" unique_id=659449664]
-position = Vector2(1, 0.5)
-shape = SubResource("RectangleShape2D_af2a1")
-
 [node name="CautionL" type="TileMapLayer" parent="." unique_id=1003782370]
 use_parent_material = true
 tile_map_data = PackedByteArray("AAAOAAEABwAVAAsAADAOAAIABwAVAAoAADAbAAEABwAVAAoAAAAbAAIABwAVAAsAAAAVAAcABwAVAAoAAFAUAAcABwAVAAsAAFAnACMACAAIAAUAAFAoACQACAAIAAUAAAAkACgACAAIAAUAADAjACcACAAIAAUAAGA3ACQACAAIAAUAAGAJABsABwASAAoAAGAQABoABwASAAoAAFAQABsABwATAAoAAFAPABoABwASAAsAAFAPABsABwATAAsAAFAOABoABwASAAwAAFAOABsABwATAAwAAFALABoABwATAAwAAGALABsABwASAAwAAGAKABoABwATAAsAAGAKABsABwASAAsAAGAJABoABwATAAoAAGAQACMABwAfAAAAAAAQAB8ABwAfAAAAAAASAB4ABwAQAAMAAAATAB4ABwAQAAMAAAATAB8ABwAQAAMAAAATACAABwAQAAMAAAANABkABwAYAAwAAFAMABkABwAYAA0AAFAVACQABwAYAA0AADAVACUABwAYAAwAADBHABwABwAPAAMAAABGABwABwARAAMAAABFABwABwAQAAMAAABEABwABwAQAAMAAABDABwABwARAAMAAAA3AA0ABwAgAAsAAAA3ABAABwAgAAsAAAA3ABMABwAgAAsAAAA3ABYABwAgAAsAAAA3ABwABwAgAAsAAAA3AB8ABwAgAAsAAAA7AB8ABwAfAAYAAAA7ABYABwAfAAYAAAA7AA4ABwAfAAYAAAA7AA8ABwARAAsAAAA7ABAABwARAAwAAAA7ABMABwARAAsAAAA7ABQABwARAAwAAAA7ABwABwARAAsAAAA7AB0ABwARAAwAAAA7ABkABwARAAsAAAA7ABoABwARAAwAAAAzABgABwARAAsAAFAyABgABwARAAwAAFA0ABkABwARAAsAAFAzABkABwARAAwAAFA1ABgABwARAAsAAFA0ABgABwARAAwAAFA2ABkABwARAAsAAFA1ABkABwARAAwAAFA5ABgABwARAAsAAFA4ABgABwARAAwAAFA6ABkABwARAAsAAFA5ABkABwARAAwAAFA=")
@@ -12144,50 +12150,193 @@ tile_set = SubResource("TileSet_fo5ed")
 collision_enabled = false
 
 [node name="Fade_transition" type="CanvasLayer" parent="." unique_id=1977008486]
+process_mode = 3
 layer = 10000
 
 [node name="Fade_transition" parent="Fade_transition" unique_id=163404452 instance=ExtResource("10_nolpu")]
+process_mode = 3
+mouse_filter = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1778452538]
 
-[node name="Dialogue2" type="CanvasLayer" parent="." unique_id=728300409]
-visible = false
+[node name="RobotEnemy" parent="." unique_id=434502012 instance=ExtResource("27_icduq")]
+position = Vector2(-324, -9)
+max_speed = 40.0
 
-[node name="MarginContainer" type="MarginContainer" parent="Dialogue2" unique_id=1185216568]
-offset_left = 427.0
-offset_top = 506.0
-offset_right = 660.0
-offset_bottom = 613.0
+[node name="EnemySpawners" type="Node2D" parent="." unique_id=120086276 groups=["spawners"]]
+script = ExtResource("28_pmaet")
+robot_scene = ExtResource("27_icduq")
+
+[node name="Marker2D" type="Marker2D" parent="EnemySpawners" unique_id=625763064 groups=["spawners"]]
+position = Vector2(921, 153)
+
+[node name="Marker2D2" type="Marker2D" parent="EnemySpawners" unique_id=738362020 groups=["spawners"]]
+position = Vector2(889, 220)
+
+[node name="Marker2D3" type="Marker2D" parent="EnemySpawners" unique_id=1407176511 groups=["spawners"]]
+position = Vector2(888, 320)
+
+[node name="Marker2D4" type="Marker2D" parent="EnemySpawners" unique_id=1232796701 groups=["spawners"]]
+position = Vector2(639, 399)
+
+[node name="Marker2D5" type="Marker2D" parent="EnemySpawners" unique_id=230051902 groups=["spawners"]]
+position = Vector2(680, 624)
+
+[node name="Marker2D6" type="Marker2D" parent="EnemySpawners" unique_id=710828279 groups=["spawners"]]
+position = Vector2(276, 34)
+
+[node name="Marker2D7" type="Marker2D" parent="EnemySpawners" unique_id=1070427456 groups=["spawners"]]
+position = Vector2(866, 31)
+
+[node name="Marker2D8" type="Marker2D" parent="EnemySpawners" unique_id=2103991428 groups=["spawners"]]
+position = Vector2(208, 454)
+
+[node name="Marker2D9" type="Marker2D" parent="EnemySpawners" unique_id=1709815712 groups=["spawners"]]
+position = Vector2(304, 591)
+
+[node name="Marker2D10" type="Marker2D" parent="EnemySpawners" unique_id=1174772779 groups=["spawners"]]
+position = Vector2(433, 441)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="EnemySpawners" unique_id=229555314]
+stream = ExtResource("29_164vy")
+volume_db = 15.335
+pitch_scale = 1.25
+
+[node name="Marker2D11" type="Marker2D" parent="EnemySpawners" unique_id=1200344088 groups=["spawners"]]
+position = Vector2(734, 402)
+
+[node name="Marker2D12" type="Marker2D" parent="EnemySpawners" unique_id=766934039 groups=["spawners"]]
+position = Vector2(673, 179)
+
+[node name="JarSpawner" type="Node2D" parent="." unique_id=2022565497 groups=["jar_locations"]]
+z_index = 10
+script = ExtResource("29_x7ktg")
+jar_scene = ExtResource("19_nolpu")
+
+[node name="Marker2D" type="Marker2D" parent="JarSpawner" unique_id=678286722 groups=["jar_locations"]]
+position = Vector2(929, 544)
+
+[node name="Marker2D2" type="Marker2D" parent="JarSpawner" unique_id=2026018995 groups=["jar_locations"]]
+position = Vector2(300, 557)
+
+[node name="Marker2D3" type="Marker2D" parent="JarSpawner" unique_id=1010237093 groups=["jar_locations"]]
+position = Vector2(161, 449)
+
+[node name="Marker2D4" type="Marker2D" parent="JarSpawner" unique_id=741613306 groups=["jar_locations"]]
+position = Vector2(433, 321)
+
+[node name="Marker2D5" type="Marker2D" parent="JarSpawner" unique_id=1821662546 groups=["jar_locations"]]
+position = Vector2(973, 205)
+
+[node name="HeartUI" type="CanvasLayer" parent="." unique_id=1181348513]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HeartUI" unique_id=467866303]
+offset_left = 22.0
+offset_top = 21.0
+offset_right = 102.0
+offset_bottom = 38.0
+scale = Vector2(3.54, 3.54)
+pivot_offset = Vector2(0, 0.35)
+theme_override_constants/separation = -25
+script = ExtResource("31_4otl7")
+
+[node name="TextureRect" type="TextureRect" parent="HeartUI/HBoxContainer" unique_id=1665417850]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("31_g2s1u")
+expand_mode = 2
+stretch_mode = 2
+
+[node name="TextureRect2" type="TextureRect" parent="HeartUI/HBoxContainer" unique_id=1886153085]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("31_g2s1u")
+expand_mode = 2
+stretch_mode = 2
+
+[node name="TextureRect3" type="TextureRect" parent="HeartUI/HBoxContainer" unique_id=1780557139]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("31_g2s1u")
+expand_mode = 2
+stretch_mode = 2
+
+[node name="ExitDoor" type="Area2D" parent="." unique_id=1947062773]
+collision_layer = 512
+collision_mask = 2
+script = ExtResource("32_4otl7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ExitDoor" unique_id=1319565330]
+position = Vector2(816, 667)
+shape = SubResource("RectangleShape2D_p68j0")
+
+[node name="Dialogue2" type="CanvasLayer" parent="." unique_id=728300409]
+unique_name_in_owner = true
+layer = 100
+
+[node name="MarginContainer" type="MarginContainer" parent="Dialogue2" unique_id=1185216568 groups=["dialogue_box"]]
+visible = false
+z_index = 150
+custom_minimum_size = Vector2(320, 100)
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -122.0
+offset_top = -138.0
+offset_right = 128.0
+offset_bottom = -31.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("33_p68j0")
 
 [node name="Panel" type="Panel" parent="Dialogue2/MarginContainer" unique_id=1947783129]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_af2a1")
 
 [node name="Label" type="Label" parent="Dialogue2/MarginContainer/Panel" unique_id=1335617043]
+unique_name_in_owner = true
 layout_mode = 0
-offset_left = -28.0
-offset_top = 12.0
-offset_right = 263.0
-offset_bottom = 90.0
+offset_left = 15.0
+offset_top = 15.0
+offset_right = 306.0
+offset_bottom = 93.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
 theme_override_colors/font_outline_color = Color(0, 0, 1, 1)
 theme_override_fonts/font = SubResource("FontVariation_ocmlb")
 theme_override_font_sizes/font_size = 10
-text = "Now that you've found 
-the vile, find the exit!
-It will be at the end of
-one of the paths..."
+text = "You have found the vile! Quick, before the robots come
+		find the exit located at one of paths"
 horizontal_alignment = 1
 vertical_alignment = 1
+autowrap_mode = 3
 
 [node name="DialogueTimer" type="Timer" parent="Dialogue2" unique_id=1180624556]
+unique_name_in_owner = true
 wait_time = 10.0
 one_shot = true
 
-[connection signal="object_activated" from="objects" to="." method="_on_objects_object_activated"]
-[connection signal="body_entered" from="DoorArea" to="DoorArea" method="_on_body_entered"]
-[connection signal="timeout" from="Dialogue2/DialogueTimer" to="." method="_on_dialogue_timer_timeout"]
+[node name="GameOver" parent="." unique_id=791916118 instance=ExtResource("34_c4ifa")]
+layer = 4096
+visible = false
 
+[node name="NPC_TSA" parent="." unique_id=588050324 instance=ExtResource("35_daeh6")]
+z_index = 10
+position = Vector2(67, 240)
+collision_mask = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="NPC_TSA" unique_id=1668327218]
+position = Vector2(29, 1)
+polygon = PackedVector2Array(-1, 2, 0, 5, 3, 8, 3, 14, 2, 19, 5, 30, 5, 32, -25, 32, -25, -1, -2, -1)
+
+[connection signal="timeout" from="Player/StunTimer" to="Player" method="_on_stun_timer_timeout"]
+[connection signal="body_entered" from="ExitDoor" to="ExitDoor" method="_on_body_entered"]
+[connection signal="timeout" from="Dialogue2/DialogueTimer" to="Dialogue2/MarginContainer" method="_on_dialogue_timer_timeout"]
+
+[editable path="Player"]
 [editable path="Fade_transition/Fade_transition"]
+[editable path="GameOver"]
+[editable path="GameOver/Fade_transition"]
