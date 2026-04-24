@@ -3,14 +3,13 @@ extends CharacterBody2D
 
 
 var yspeed = 200
+var yloc = 0
 
 
 
 
 
 func _ready():
-	await get_tree().process_frame
-	print("MY POSITION IS: ", global_position) # <--- ADD THIS
 	$AnimatedSprite2D.play("runner")
 
 
@@ -20,12 +19,16 @@ func _physics_process(delta):
 
 
 func Player_movement(delta):
-	if Input.is_action_pressed("up"):
-		velocity.y = -yspeed
-	elif Input.is_action_pressed("down"):
-		velocity.y = yspeed
-	else:
-		velocity.y = 0
+	if Input.is_action_just_released("up"):
+		if(yloc > -200):
+			yloc = yloc - 100
+		global_position = Vector2(0, yloc)
+		
+	elif Input.is_action_just_pressed("down"):
+		if(yloc < 200):
+			yloc = yloc +100
+		global_position = Vector2(0, yloc)
+	
 	move_and_slide()
 
 
