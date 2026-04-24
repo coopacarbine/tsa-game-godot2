@@ -74,6 +74,32 @@ animations = [{
 "loop": true,
 "name": &"road",
 "speed": 17.0
+"texture": SubResource("AtlasTexture_kt7k4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mfs8c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uied1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y5iej")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ycffw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wifok")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vpj7l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dycdb")
+}],
+"loop": true,
+"name": &"road",
+"speed": 5.0
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fbdb1"]
@@ -806,6 +832,11 @@ position = Vector2(448, 135)
 scale = Vector2(4.328125, 4.3125)
 sprite_frames = SubResource("SpriteFrames_kt7k4")
 animation = &"idle"
+[node name="player2" parent="." unique_id=467945452 instance=ExtResource("1_vlonw")]
+position = Vector2(-4, 1)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1408515526]
+position = Vector2(-5, -32)
 
 [node name="car" parent="." unique_id=1538372069 instance=ExtResource("3_8hx2h")]
 visible = false

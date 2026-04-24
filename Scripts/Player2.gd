@@ -10,7 +10,7 @@ var yloc = 0
 
 
 func _ready():
-	$AnimatedSprite2D.play("runner")
+	$AnimatedSprite2D.play("new_run")
 
 
 
