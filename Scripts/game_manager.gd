@@ -1,6 +1,5 @@
 extends Node
 #lootbox vars
-# The % symbol finds a node with a "Unique Name" anywhere in the current scene
 
 var is_transitioning: bool = false
 
@@ -11,7 +10,6 @@ var is_restarting: bool = false
 var has_ended: bool = false
 var lives = 3
 var timerIndex = 0
-
 
 func _ready():
 	start_level_timer()
@@ -37,15 +35,6 @@ func start_level_timer():
 	
 	endGame(1)
 
-
-func _physics_process(delta):
-	if player == null:
-		player = get_node_or_null("%THE_HERO")
-		if player != null:
-			print("FOUND HIM! He just took a second to load.")
-	spinBox(delta)
-	
-	
 
 	
 	
